@@ -4,6 +4,7 @@ subtitle: "Hospitilizations by Type and Availabe ICU Beds for Lancaster and Phil
 output:
   rmarkdown::html_document:
     theme: flatly
+output_dir: docs
 editor_options: 
   chunk_output_type: console
 ---
@@ -24,7 +25,7 @@ library(plotly)
 options(scipen = 999) 
 ```
 
-This website is a test site, intended for personal use only. Please do not use this site as a source for reliable information on COVID.
+*Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
 
 ```{r read in philadelphia}
 

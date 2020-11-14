@@ -4,6 +4,7 @@ subtitle: "CDC, PA Department of Education, and CHOP Recommendations Based on Cu
 output:
   rmarkdown::html_document:
     theme: flatly
+output_dir: docs
 editor_options: 
   chunk_output_type: console
 ---
@@ -24,13 +25,15 @@ library(plotly)
 options(scipen = 999) 
 ```
 
-The purpose of this website is to apply COVID-19 school recommendations from trusted sources to the current situation in Philadelphia. To this end, recommended measures and thresholds from the following publications are calcuated, and published recommendations based on these indicators are presented.
+The purpose of this website is to apply COVID-19 school recommendations from trusted sources to the current situation in Philadelphia. To this end, recommended measures and thresholds from the following publications are calculated, and published recommendations based on these indicators are presented.
 
 * [Centers for Disease Control and Prevention (CDC)](https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/indicators.html#thresholds)
 * [Pennsylvania Department of Education (PA DOE) Instructional Model Recommendations](https://www.education.pa.gov/Schools/safeschools/emergencyplanning/COVID-19/SchoolReopeningGuidance/ReopeningPreKto12/Pages/DeterminingInstructionalModels.aspx)
 * [Children's Hospital of Philadelphia (CHOP) Quick Reference Guide for Reopening Schools](https://policylab.chop.edu/sites/default/files/pdf/publications/PolicyLab-Quick-Reference-Guide-For-Reopening-Schools.pdf)
 
 Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases).
+
+*Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
 
 ```{r}
 
