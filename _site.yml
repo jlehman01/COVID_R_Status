@@ -6,3 +6,4 @@ navbar:
       href: index.html
     - text: "School Guidance"
       href: covid_status.html
+output_dir: "docs"
