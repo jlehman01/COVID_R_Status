@@ -1,6 +1,6 @@
 ---
 title: "Philadelphia & Lancaster COVID Hospitilizations"
-subtitle: "Hospitilizations by Type and Availabe ICU Beds for Lancaster and Philadelphia Counties"
+subtitle: "Hospitilizations by Type and Available ICU Beds for Lancaster and Philadelphia Counties"
 output:
   rmarkdown::html_document:
     theme: flatly
