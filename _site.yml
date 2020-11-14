@@ -1,0 +1,8 @@
+name: "my-website"
+navbar:
+  title: "Tracking Covid"
+  left:
+    - text: "Hospitilizations"
+      href: index.html
+    - text: "School Guidance"
+      href: covid_status.html
