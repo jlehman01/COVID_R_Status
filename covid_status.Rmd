@@ -4,7 +4,7 @@ subtitle: "CDC, PA Department of Education, and CHOP Recommendations Based on Cu
 output:
   rmarkdown::html_document:
     theme: flatly
-output_dir: docs
+output_dir: "docs"
 editor_options: 
   chunk_output_type: console
 ---
