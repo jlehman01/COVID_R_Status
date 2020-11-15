@@ -54,7 +54,7 @@ philadelphia <- data_longer %>%
 
 ggplotly(ggplot(philadelphia, aes(x = date, y = number)) + 
   geom_line(aes(color = indicator), size = 1) +
-  ggtitle("Philadelphia COVID Hospitilizations") +
+  ggtitle("Philadelphia COVID Hospitalizations") +
   theme_minimal())
 ```
 
@@ -87,6 +87,6 @@ lancaster <- data_longer %>%
 
 ggplotly(ggplot(lancaster, aes(x = date, y = number)) + 
   geom_line(aes(color = indicator), size = 1) +
-  ggtitle("Lancaster COVID Hospitilizations") +
+  ggtitle("Lancaster COVID Hospitalizations") +
   theme_minimal())
 ```
