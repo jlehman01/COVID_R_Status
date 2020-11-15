@@ -1,6 +1,6 @@
 ---
-title: "Philadelphia & Lancaster COVID Hospitilizations"
-subtitle: "Hospitilizations by Type and Available ICU Beds for Lancaster and Philadelphia Counties"
+title: "Philadelphia & Lancaster COVID Hospitalizations"
+subtitle: "Hospitalizations by Type and Available ICU Beds for Lancaster and Philadelphia Counties"
 output:
   rmarkdown::html_document:
     theme: flatly
@@ -72,6 +72,8 @@ data_longer <- pivot_longer(data_import, cols = colnames,
                             names_to = "indicator", values_to = "number") %>%
   mutate(number = as.numeric(number))
 
+
+           
 ```
 
 
