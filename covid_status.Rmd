@@ -33,6 +33,8 @@ The purpose of this website is to apply COVID-19 school recommendations from tru
 
 Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases).
 
+Three most recent days removed from analysis as City has indicated that more recent days are incomplete.
+
 *Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
 
 ```{r}
