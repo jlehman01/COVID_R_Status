@@ -39,3 +39,4 @@ vignettes/*.pdf
 
 /covid19-philadelphia-master
 covid_archive_github.zip
+covid_status.Rmd
