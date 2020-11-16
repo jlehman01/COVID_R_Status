@@ -1,5 +1,5 @@
 ---
-title: "Philadelphia & Lancaster COVID Hospitalizations"
+title: "COVID Hospitalizations"
 subtitle: "Hospitalizations by Type and Available ICU Beds for Lancaster and Philadelphia Counties"
 output:
   rmarkdown::html_document:
@@ -76,7 +76,6 @@ data_longer <- pivot_longer(data_import, cols = colnames,
            
 ```
 
-
 ```{r plot lancaster}
 
 lancaster <- data_longer %>% 
@@ -90,3 +89,47 @@ ggplotly(ggplot(lancaster, aes(x = date, y = number)) +
   ggtitle("Lancaster COVID Hospitalizations") +
   theme_minimal())
 ```
+
+```{r pediatric, eval=FALSE}
+
+# Stack daily files within folder and keep distinct records
+build_historical_dataset <- function(data_folder) {
+  list.files(path = data_folder, full.names = TRUE) %>%
+    map_dfr(read_csv) %>%
+    distinct() # duplicates occur when there is an extract but no data update
+}
+
+# Cases by test result and reporting dates
+cases_by_age <- build_historical_dataset("/Users/joellehman/Documents/GitHub/covid19-philadelphia/cases_by_age/")
+
+cases_under_20_complete <- cases_by_age %>% 
+  filter(age == "<20") %>% 
+  mutate(date = as.Date(etl_timestamp)) %>% 
+   complete(date = full_seq(date, period = 1), fill = list(count = NA, age = "<20"))
+
+cases_under_20_complete$count_imputed <- na.approx(cases_under_20_complete$count, maxgap = 7)
+
+cases_under_20_complete <- cases_under_20_complete %>% 
+  mutate(new_cases = count_imputed - lag(count_imputed, n=1))
+
+ 
+  pct_change <- ggplot(data=cases_under_20_complete, aes(x=date, y=new_cases)) + 
+  geom_segment(aes(x=date, 
+                   xend=date, 
+                   y=0, 
+                   yend=new_cases)) + 
+   geom_line(aes(y=rollmean(new_cases, 7, na.pad=TRUE))) +
+  labs(title="New Cases (<20)") +
+    xlab("") +
+    ylab("New Cases") +
+  theme_bw() + theme(legend.position="none")
+  
+  
+
+  
+ggplotly(pct_change)
+
+
+
+```
+

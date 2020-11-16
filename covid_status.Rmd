@@ -1,5 +1,5 @@
 ---
-title: "Philadelphia COVID Guidance for Schools"
+title: "COVID Testing &  Guidance for Schools"
 subtitle: "CDC, PA Department of Education, and CHOP Recommendations Based on Current COVID Indicators in Philadelphia."
 output:
   rmarkdown::html_document:
@@ -318,7 +318,12 @@ ggplotly(pct_change)
 
 ```
 
-```{r, eval=FALSE}
+```{r new pediatric cases, eval=TRUE}
+
+
+download.file(url = "https://github.com/ambientpointcorp/covid19-philadelphia/archive/master.zip", destfile = "covid_archive_github.zip")
+
+unzip(zipfile = "covid_archive_github.zip")
 
 # Stack daily files within folder and keep distinct records
 build_historical_dataset <- function(data_folder) {
@@ -328,7 +333,7 @@ build_historical_dataset <- function(data_folder) {
 }
 
 # Cases by test result and reporting dates
-cases_by_age <- build_historical_dataset("/Users/joellehman/Documents/GitHub/covid19-philadelphia/cases_by_age/")
+cases_by_age <- build_historical_dataset("covid19-philadelphia-master/cases_by_age/")
 
 cases_under_20_complete <- cases_by_age %>% 
   filter(age == "<20") %>% 
@@ -338,57 +343,58 @@ cases_under_20_complete <- cases_by_age %>%
 cases_under_20_complete$count_imputed <- na.approx(cases_under_20_complete$count, maxgap = 7)
 
 cases_under_20_complete <- cases_under_20_complete %>% 
-  mutate(new_cases = count_imputed - lag(count_imputed, n=1))
+  mutate(new_cases = count_imputed - lag(count_imputed, n=1),
+         new_cases_7_mean = rollmean(new_cases, 7, align = "right", na.pad=TRUE)
+         )
 
- 
-  pct_change <- ggplot(data=cases_under_20_complete, aes(x=date, y=new_cases)) + 
-  geom_segment(aes(x=date, 
-                   xend=date, 
-                   y=0, 
-                   yend=new_cases)) + 
-   geom_line(aes(y=rollmean(new_cases, 7, na.pad=TRUE))) +
-  labs(title="New Cases (<20)") +
-    xlab("") +
-    ylab("New Cases") +
-  theme_bw() + theme(legend.position="none")
-  
-  
 
-  
-ggplotly(pct_change)
 
+
+
+    covid_cases_under_20 <- ggplot(data = cases_under_20_complete, aes(x=date,
+             y=new_cases)) +
+  geom_col(fill="pink")+
+  geom_line(aes(y = new_cases_7_mean), 
+            color = "red", 
+            size = .75)+
+  labs(title="New Philadelphia COVID Cases for < 20 Population",
+       y="New Cases / Day") +
+      theme_bw()
+  
+ggplotly(covid_cases_under_20)
 
 
 ```
-```
 
 
-```{r, eval=FALSE}
+````{r ped hospitilizations}
 
-phila_city_pop <- 1584064
+# Cases by test result and reporting dates
+hospitilizations_by_age <- build_historical_dataset("covid19-philadelphia-master/hospitalizations_by_age/")
 
-url_hospitilizations <- URLencode("https://phl.carto.com/api/v2/sql?q=SELECT * FROM covid_hospitalizations_by_date")
+hospitilizations_under_20_complete <- cases_by_age %>% 
+  filter(age == "<20") %>% 
+  mutate(date = as.Date(etl_timestamp)) %>% 
+   complete(date = full_seq(date, period = 1), fill = list(Yes = NA, age = "<20"))
 
-data_hospitilizations_import <- fromJSON(url_hospitilizations)
+hospitilizations_under_20_complete$Yes_imputed <- na.approx(hospitilizations_under_20_complete$Yes, maxgap = 7)
 
-hospitilization_data <- data_hospitilizations_import$rows %>% 
-  select(-etl_timestamp, -the_geom_webmercator, -the_geom, -cartodb_id) %>% 
-  mutate(date = as.Date(date)) %>% 
-  filter(hospitalized == "Yes") %>% 
-  drop_na(date) %>% 
-  complete(date = full_seq(date, period = 1), fill = list(hospitalized = "Yes", positive = NA))
+hospitilizations_under_20_complete <- hospitilizations_under_20_complete %>% 
+  mutate(new_hospitilizations = Yes_imputed - lag(Yes_imputed, n=1),
+         new_hospitilizations_7_mean = rollmean(new_hospitilizations, 7, align = "right", na.pad=TRUE)
+         )
 
-hospitilization_data$count_imputed <- na.approx(hospitilization_data$count, maxgap = 7) 
-
-hospitilization_data <- hospitilization_data %>% 
+covid_hospitilizations_under_20 <- ggplot(data = hospitilizations_under_20_complete, aes(x=date,
+             y=new_hospitilizations)) +
+  geom_col(fill="pink")+
+  geom_line(aes(y = new_hospitilizations_7_mean), 
+            color = "red", 
+            size = .75)+
+  labs(title="New Philadelphia COVID Hospitalizations for < 20 Population",
+       y="New Hospitalizations / Day") +
+      theme_bw()
   
-  mutate(count_rate = count_imputed/1584064*100000,
-         ut_austin_status = case_when(count_rate < 1.037 ~ "Stage 1",
-                                      count_rate >= 1.037 & count_rate < 4.045 ~ "Stage 2",
-                                      count_rate >= 4.045 & count_rate < 7.259 ~ "Stage 3",
-                                      count_rate >= 7.259 & count_rate < 12.756 ~ "Stage 4", 
-                                      count_rate > 12.756 ~ "Stage 5")
-  )
+ggplotly(covid_hospitilizations_under_20)
 
 
 ```
