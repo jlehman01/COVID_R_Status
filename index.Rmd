@@ -90,7 +90,7 @@ ggplotly(ggplot(lancaster, aes(x = date, y = number)) +
   theme_minimal())
 ```
 
-```{r pediatric, eval=FALSE}
+```{r pediatric}
 
 # Stack daily files within folder and keep distinct records
 build_historical_dataset <- function(data_folder) {
@@ -125,11 +125,40 @@ cases_under_20_complete <- cases_under_20_complete %>%
   theme_bw() + theme(legend.position="none")
   
   
-
-  
 ggplotly(pct_change)
 
 
 
 ```
 
+````{r ped hospitilizations}
+
+# Cases by test result and reporting dates
+hospitilizations_by_age <- build_historical_dataset("covid19-philadelphia-master/hospitalizations_by_age/")
+
+hospitilizations_under_20_complete <- cases_by_age %>% 
+  filter(age == "<20") %>% 
+  mutate(date = as.Date(etl_timestamp)) %>% 
+   complete(date = full_seq(date, period = 1), fill = list(Yes = NA, age = "<20"))
+
+hospitilizations_under_20_complete$Yes_imputed <- na.approx(hospitilizations_under_20_complete$Yes, maxgap = 7)
+
+hospitilizations_under_20_complete <- hospitilizations_under_20_complete %>% 
+  mutate(new_hospitilizations = Yes_imputed - lag(Yes_imputed, n=1),
+         new_hospitilizations_7_mean = rollmean(new_hospitilizations, 7, align = "right", na.pad=TRUE)
+         )
+
+covid_hospitilizations_under_20 <- ggplot(data = hospitilizations_under_20_complete, aes(x=date,
+             y=new_hospitilizations)) +
+  geom_col(fill="pink")+
+  geom_line(aes(y = new_hospitilizations_7_mean), 
+            color = "red", 
+            size = .75)+
+  labs(title="New Philadelphia COVID Hospitalizations for < 20 Population",
+       y="New Hospitalizations / Day") +
+      theme_bw()
+  
+ggplotly(covid_hospitilizations_under_20)
+
+
+```
