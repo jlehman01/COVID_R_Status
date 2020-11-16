@@ -40,3 +40,5 @@ vignettes/*.pdf
 /covid19-philadelphia-master
 covid_archive_github.zip
 covid_status.Rmd
+/docs/covid19-philadelphia-master
+/docs/covid_archive_github.zip

@@ -92,10 +92,9 @@ ggplotly(ggplot(lancaster, aes(x = date, y = number)) +
 
 ```{r new pediatric cases, eval=TRUE}
 
-
 download.file(url = "https://github.com/ambientpointcorp/covid19-philadelphia/archive/master.zip", destfile = "covid_archive_github.zip")
 
-unzip(zipfile = "covid_archive_github.zip")
+unzip(zipfile = "covid_archive_github.zip", overwrite = T)
 
 # Stack daily files within folder and keep distinct records
 build_historical_dataset <- function(data_folder) {
@@ -119,10 +118,6 @@ cases_under_20_complete <- cases_under_20_complete %>%
          new_cases_7_mean = rollmean(new_cases, 7, align = "right", na.pad=TRUE)
          )
 
-
-
-
-
     covid_cases_under_20 <- ggplot(data = cases_under_20_complete, aes(x=date,
              y=new_cases)) +
   geom_col(fill="pink")+
@@ -130,7 +125,8 @@ cases_under_20_complete <- cases_under_20_complete %>%
             color = "red", 
             size = .75)+
   labs(title="New Philadelphia COVID Cases for < 20 Population",
-       y="New Cases / Day") +
+       y="New Cases / Day",
+       x="") +
       theme_bw()
   
 ggplotly(covid_cases_under_20)
@@ -160,10 +156,10 @@ covid_hospitilizations_under_20 <- ggplot(data = hospitilizations_under_20_compl
              y=new_hospitilizations)) +
   geom_col(fill="pink")+
   labs(title="New Philadelphia COVID Hospitalizations for < 20 Population",
-       y="New Hospitalizations") +
+       y="New Hospitalizations",
+       x="") +
       theme_bw()
   
 ggplotly(covid_hospitilizations_under_20)
-
 
 ```
