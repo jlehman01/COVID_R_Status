@@ -35,7 +35,7 @@ Data notes:
 * Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases).
 * 3 most recent days removed from analysis, as Philadelphai city notes recent days are incomplete.
 
-warning('Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.')
+*Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
 
 ```{r}
 
