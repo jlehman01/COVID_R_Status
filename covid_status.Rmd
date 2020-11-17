@@ -31,11 +31,11 @@ The purpose of this website is to apply COVID-19 school recommendations from tru
 * [Pennsylvania Department of Education (PA DOE) Instructional Model Recommendations](https://www.education.pa.gov/Schools/safeschools/emergencyplanning/COVID-19/SchoolReopeningGuidance/ReopeningPreKto12/Pages/DeterminingInstructionalModels.aspx)
 * [Children's Hospital of Philadelphia (CHOP) Quick Reference Guide for Reopening Schools](https://policylab.chop.edu/sites/default/files/pdf/publications/PolicyLab-Quick-Reference-Guide-For-Reopening-Schools.pdf)
 
-Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases).
+Data notes:
+* Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases).
+* 3 most recent days removed from analysis, as Philadelphai city notes recent days are incomplete.
 
-Three most recent days removed from analysis as City has indicated that more recent days are incomplete.
-
-*Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
+warning('Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.')
 
 ```{r}
 

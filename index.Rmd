@@ -25,7 +25,7 @@ library(plotly)
 options(scipen = 999) 
 ```
 
-*Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
+warning('Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.')
 
 ```{r, echo=FALSE, results = 'asis'}
 
