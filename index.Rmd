@@ -29,6 +29,9 @@ options(scipen = 999)
 
 ```{r read in philadelphia}
 
+today <- today()
+cat("Site last updated ", format(today, format= "%B %d %Y"))
+
 url <- URLencode("https://data.pa.gov/resource/kayn-sjhx.json?county=Philadelphia")
 
 data_import <- fromJSON(url)
