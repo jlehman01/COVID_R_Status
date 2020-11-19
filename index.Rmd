@@ -68,7 +68,7 @@ philadelphia <- data_longer %>%
                           "covid_patients_adult_in_icu", "icu_avail")) %>% 
   drop_na()
 
-ggplotly(ggplot(philadelphia, aes(x = date, y = number)) + 
+ggplotly(ggplot(philadelphia, aes(x = date, y = number, size = 1)) + 
   geom_line(aes(color = indicator), size = 1) +
   ggtitle("Philadelphia COVID Hospitalizations") +
   theme_minimal())
@@ -100,7 +100,7 @@ lancaster <- data_longer %>%
                           "covid_patients_adult_in_icu", "icu_avail")) %>% 
   drop_na()
 
-ggplotly(ggplot(lancaster, aes(x = date, y = number)) + 
+ggplotly(ggplot(lancaster, aes(x = date, y = number, size = 1)) + 
   geom_line(aes(color = indicator), size = 1) +
   ggtitle("Lancaster COVID Hospitalizations") +
   theme_minimal())
