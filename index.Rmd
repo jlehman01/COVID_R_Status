@@ -203,8 +203,7 @@ pct_positive_by_zip_complete <- pct_positive_by_zip %>%
          PCT_postive_14_day = POS_14_day_cum/NEG_14_day_cum)
 
 
-
-ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_day)) + 
+ggplotly(ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_day)) + 
   geom_line(aes(color = as.character(zip_code))) +
   xlab("") +
   ylab("% Positive (14-days)") +
@@ -221,5 +220,5 @@ ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_d
   geom_hline(yintercept=0.10, linetype="dashed", 
                 color = "#ca562c", size=0.5) +
     annotate(geom="text",x=as.Date("2020-08-05"), y=.11, label="Highest Risk (CDC)", color = "#ca562c", size=3) +
-  theme_bw())
+  theme_bw()))
 ```
