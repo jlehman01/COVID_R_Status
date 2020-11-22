@@ -1,5 +1,5 @@
 ---
-title: "COVID Hospitalizations"
+title: "COVID Hospitalizations & Testing Metrics"
 subtitle: "Hospitalizations by Type and Available ICU Beds for Lancaster and Philadelphia Counties"
 output:
   rmarkdown::html_document:
