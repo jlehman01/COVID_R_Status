@@ -184,14 +184,11 @@ ggplotly(covid_hospitilizations_under_20)
 
 pct_positive_by_zip <- build_historical_dataset("covid19-philadelphia-master/cases_by_zipcode/")
 
-# %>% 
-#   filter(zip_code != 19108 & zip_code != 19109 & zip_code != 19110 & zip_code != 19113 & zip_code != 19155 & zip_code != 19160 & zip_code != 19161 & zip_code != 19170 & zip_code != 19176 & zip_code != 19178 & zip_code != 19181 & zip_code & zip_code != 19183 & zip_code != 19188 & zip_code != 19190 & zip_code != 19191& zip_code != 19155 & zip_code != 19192 & zip_code != 19193  & zip_code != 19194  & zip_code != 19197) %>% 
-
 
 pct_positive_by_zip_complete <- pct_positive_by_zip %>% 
   mutate(date = as.Date(etl_timestamp)) %>% 
   group_by(zip_code) %>% 
-  filter(zip_code == 19143 | zip_code == 19104 | zip_code == 19146 | zip_code ==  19139 ) %>% 
+ filter(zip_code != 19108 & zip_code != 19109 & zip_code != 19110 & zip_code != 19113 & zip_code != 19155 & zip_code != 19160 & zip_code != 19161 & zip_code != 19170 & zip_code != 19176 & zip_code != 19178 & zip_code != 19181 & zip_code & zip_code != 19183 & zip_code != 19188 & zip_code != 19190 & zip_code != 19191& zip_code != 19155 & zip_code != 19192 & zip_code != 19193  & zip_code != 19194  & zip_code != 19197) %>% 
   complete(date = full_seq(date, period = 1), fill = list(NEG = NA, POS = NA)) %>%
   mutate(POS_imputed = na.approx(POS),
          NEG_imputed = na.approx(NEG),
