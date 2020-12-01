@@ -1,6 +1,5 @@
 ---
-title: "COVID Hospitalizations & Testing Metrics"
-subtitle: "Hospitalizations by Type and Available ICU Beds for Lancaster and Philadelphia Counties"
+title: "COVID General Indicators"
 output:
   rmarkdown::html_document:
     theme: flatly

@@ -2,7 +2,7 @@ name: "Tracking Covid"
 navbar:
   title: "Tracking Covid"
   left:
-    - text: "Hospitalizations"
+    - text: "General Indicators"
       href: index.html
     - text: "School Guidance"
       href: covid_status.html
