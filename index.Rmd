@@ -35,6 +35,12 @@ options(scipen = 999)
 
 *Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
 
+Data notes: 
+
+* Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases).
+* Hospital data from [PA Dpt. of Health](https://data.pa.gov/Health/Coronavirus-COVID-19-Department-of-Health-Website/98pd-gs2r).
+
+
 ```{r, echo=FALSE, results = 'asis'}
 
 today <- today()
