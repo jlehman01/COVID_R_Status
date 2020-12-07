@@ -208,7 +208,7 @@ pct_positive_by_zip_complete <- pct_positive_by_zip %>%
 ggplotly(ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_day)) + 
   geom_line(aes(color = as.character(zip_code))) +
   xlab("") +
-  ylab("% Positive (14-day rolling average)") +
+  ylab("Portion Positive (14-day rolling average)") +
   ggtitle("Percent Positive by Phila Zip") +
   geom_hline(yintercept=.03, linetype="dashed", 
                 color = "#008080", size=0.5) +

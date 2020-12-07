@@ -34,9 +34,8 @@ The purpose of this website is to apply COVID-19 school recommendations from tru
 Data notes:
 
 * Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases). 
-* 3 most recent days removed from analysis, as Philadelphai city notes recent days are incomplete. 
-* Note that the data source used for this page reports test results based on the test date, while the 3 most recent days are removed, the dataset represents the most recent snapshot of data. Each day many tests are added and backdated. 
-* The [specific dataset](https://www.opendataphilly.org/dataset/covid-cases/resource/85fead1a-0ec3-4856-98a9-27ba4fa941ee) used to populate this page appears to report test results based on the day they were taken, and not on the day the results were officially reported. 
+* 3 most recent days removed from analysis, as Philadelphia city notes recent days are incomplete. 
+* The [specific dataset](https://www.opendataphilly.org/dataset/covid-cases/resource/85fead1a-0ec3-4856-98a9-27ba4fa941ee) used to populate this page appears to report test results based on the day they were taken, and not on the day the results were officially reported. Eacy day the city adds new data, but many cases are backdated, meaning the most recent days are incomplet and will change.
 
 *Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
 
