@@ -39,6 +39,7 @@ Data notes:
 
 * Testing data from [OpenDataPhilly](https://www.opendataphilly.org/dataset/covid-cases).
 * Hospital data from [PA Dpt. of Health](https://data.pa.gov/Health/Coronavirus-COVID-19-Department-of-Health-Website/98pd-gs2r).
+* Testing data on this page is built by assembling daily reports by subset (zip code, age), which appear to classify dates based on when the results were reported (as opposed to when the test was taken). The city data portal does not provide time series data by subset (zip code, age). Numbers on the [School Guidance](https://jlehman01.github.io/COVID_R_Status/covid_status.html) page will vary slightly from the data on this due to this discrepancy in date reporting, and will be more accurate.
 
 
 ```{r, echo=FALSE, results = 'asis'}
@@ -207,7 +208,7 @@ pct_positive_by_zip_complete <- pct_positive_by_zip %>%
 ggplotly(ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_day)) + 
   geom_line(aes(color = as.character(zip_code))) +
   xlab("") +
-  ylab("% Positive (7-day rolling average)") +
+  ylab("% Positive (14-day rolling average)") +
   ggtitle("Percent Positive by Phila Zip") +
   geom_hline(yintercept=.03, linetype="dashed", 
                 color = "#008080", size=0.5) +
