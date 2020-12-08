@@ -20,6 +20,7 @@ library(kableExtra)
 library(data.table)
 library(lubridate)
 library(plotly)
+library(ggpmisc)
 
 knitr::knit_hooks$set(
    warning = function(x, options) {
@@ -79,6 +80,9 @@ ggplotly(ggplot(philadelphia, aes(x = date, y = number)) +
   ggtitle("Philadelphia COVID Hospitalizations") +
   theme_minimal())
 ```
+
+
+
 
 ```{r read in lancaster}
 
@@ -223,4 +227,50 @@ ggplotly(ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_pos
                 color = "#ca562c", size=0.5) +
     annotate(geom="text",x=as.Date("2020-08-05"), y=.11, label="Highest Risk (CDC)", color = "#ca562c", size=3) +
   theme_bw()))
+
 ```
+
+
+```{r}
+
+philadelphia_icu <- philadelphia %>% 
+  filter(indicator=="icu_avail", date >= today() - days(14))
+
+philadelphia_icu$date <- as.Date(philadelphia_icu$date)
+
+past_date <- as.Date(today()-days(14))
+future_date <- as.Date(today()+days(14))
+
+
+ggplotly(ggplot(philadelphia_icu, aes(x=date, y=number)) +
+  geom_line() + 
+  geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
+  scale_x_date(expand = c(0, 7)) +  
+  labs(title="Philadelphia 14-Day ICU Avaibility Trend",
+       y="ICU Beds Open",
+       x="") +
+    theme_bw())
+
+
+
+lancaster_icu <- lancaster %>% 
+  filter(indicator=="icu_avail", date >= today() - days(14))
+
+lancaster_icu$date <- as.Date(lancaster_icu$date)
+
+past_date <- as.Date(today()-days(14))
+future_date <- as.Date(today()+days(14))
+
+
+ggplotly(ggplot(lancaster_icu, aes(x=date, y=number)) +
+  geom_line() + 
+  geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
+  scale_x_date(expand = c(0, 7)) +  
+  labs(title="Lancaster 14-Day ICU Avaibility Trend",
+       y="ICU Beds Open",
+       x="") +
+    theme_bw())
+
+
+```
+
