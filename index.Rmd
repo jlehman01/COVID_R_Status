@@ -246,7 +246,7 @@ phil_icu <- ggplot(philadelphia_icu, aes(x=date, y=number)) +
   geom_line() + 
   geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
   scale_x_date(expand = c(0, 7)) +  
-  labs(title="Philadelphia 14-Day ICU Avaibility Trend",
+  labs(title="Philadelphia 14-Day ICU Availability Trend",
        y="ICU Beds Open",
        x="") +
     theme_bw()
@@ -264,7 +264,7 @@ lanc_icu <- ggplot(lancaster_icu, aes(x=date, y=number)) +
   geom_line() + 
   geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
   scale_x_date(expand = c(0, 7)) +  
-  labs(title="Lancaster 14-Day ICU Avaibility Trend",
+  labs(title="Lancaster 14-Day ICU Availability Trend",
        y="ICU Beds Open",
        x="") +
     theme_bw()
