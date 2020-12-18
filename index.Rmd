@@ -54,11 +54,12 @@ cat("Site last updated ", format(today, format= "%B %d %Y"))
 
 url <- URLencode("https://data.pa.gov/resource/kayn-sjhx.json?county=Philadelphia")
 
-data_import <- fromJSON(url)
+data_import <- fromJSON(url) %>% 
+  select(date, covid_patients, covid_vents, icu_avail)
 
 data_import$date <- as_datetime(data_import$date)
 
-colnames <- colnames(data_import[3:37])
+colnames <- colnames(data_import[2:4])
 
 data_longer <- pivot_longer(data_import, cols = colnames, 
                             names_to = "indicator", values_to = "number") %>%
@@ -70,10 +71,8 @@ data_longer <- pivot_longer(data_import, cols = colnames,
 ```{r plot philadelphia}
 
 philadelphia <- data_longer %>% 
-  filter(county == "Philadelphia", 
-         indicator %in% c("date", "covid_patients", "covid_vents", 
-                          "covid_patients_adult_in_icu", "icu_avail")) %>% 
-  drop_na()
+  filter(indicator %in% c("date", "covid_patients", "covid_vents", 
+                          "icu_avail"))
 
 ggplotly(ggplot(philadelphia, aes(x = date, y = number)) + 
   geom_line(aes(color = indicator)) +
@@ -81,18 +80,16 @@ ggplotly(ggplot(philadelphia, aes(x = date, y = number)) +
   theme_minimal())
 ```
 
-
-
-
 ```{r read in lancaster}
 
 url <- URLencode("https://data.pa.gov/resource/kayn-sjhx.json?county=Lancaster")
 
-data_import <- fromJSON(url)
+data_import <- fromJSON(url) %>% 
+  select(date, covid_patients, covid_vents, icu_avail)
 
 data_import$date <- as_datetime(data_import$date)
 
-colnames <- colnames(data_import[3:36])
+colnames <- colnames(data_import[2:4])
 
 data_longer <- pivot_longer(data_import, cols = colnames, 
                             names_to = "indicator", values_to = "number") %>%
@@ -105,8 +102,7 @@ data_longer <- pivot_longer(data_import, cols = colnames,
 ```{r plot lancaster}
 
 lancaster <- data_longer %>% 
-  filter(county == "Lancaster", 
-         indicator %in% c("date", "covid_patients", "covid_vents", 
+  filter(indicator %in% c("date", "covid_patients", "covid_vents", 
                           "covid_patients_adult_in_icu", "icu_avail")) %>% 
   drop_na()
 
@@ -231,7 +227,7 @@ ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_d
 ```
 
 
-```{r}
+```{r include = FALSE}
 
 philadelphia_icu <- philadelphia %>% 
   filter(indicator=="icu_avail", date >= today() - days(14))
