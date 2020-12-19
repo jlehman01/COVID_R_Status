@@ -103,7 +103,7 @@ data_longer <- pivot_longer(data_import, cols = colnames,
 
 lancaster <- data_longer %>% 
   filter(indicator %in% c("date", "covid_patients", "covid_vents", 
-                          "covid_patients_adult_in_icu", "icu_avail")) %>% 
+                          "icu_avail")) %>% 
   drop_na()
 
 ggplotly(ggplot(lancaster, aes(x = date, y = number)) + 
