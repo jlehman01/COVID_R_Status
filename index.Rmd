@@ -22,15 +22,6 @@ library(lubridate)
 library(plotly)
 library(ggpmisc)
 
-knitr::knit_hooks$set(
-   warning = function(x, options) {
-     paste('\n\n<div class="alert alert-warning">',
-           gsub('##', '\n', gsub('^##\ Warning:', '**Warning**', x)),
-           '</div>', sep = '\n')
-   }
-)
-
-
 options(scipen = 999) 
 ```
 
