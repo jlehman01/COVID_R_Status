@@ -182,6 +182,9 @@ ggplotly(covid_hospitilizations_under_20)
 pct_positive_by_zip <- build_historical_dataset("covid19-philadelphia-master/cases_by_zipcode/")
 
 
+
+
+
 pct_positive_by_zip_complete <- pct_positive_by_zip %>% 
   mutate(date = as.Date(etl_timestamp)) %>% 
   group_by(zip_code) %>% 
@@ -195,6 +198,9 @@ pct_positive_by_zip_complete <- pct_positive_by_zip %>%
          POS_14_day_cum = rollapplyr(POS_new, width = 14, FUN = sum, partial = TRUE),
          NEG_14_day_cum = rollapplyr(NEG_new, width = 14, FUN = sum, partial = TRUE),
          PCT_postive_14_day = POS_14_day_cum/NEG_14_day_cum)
+
+
+
 
 ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_day)) + 
   geom_line(aes(color = as.character(zip_code))) +
@@ -216,6 +222,31 @@ ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_d
   theme_bw())
 
 ```
+
+
+```{r philadelphia new positive tests per day by zip}
+
+ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = POS_new)) + 
+  geom_line(aes(color = as.character(zip_code))) +
+  xlab("") +
+  ylab("New Positive Tests Per Day per ZIP") +
+  ggtitle("New Positive Cases Per Day by ZIP (interpolated NA)") +
+  geom_hline(yintercept=.03, linetype="dashed", 
+                color = "#008080", size=0.5) +
+        annotate(geom="text",x=as.Date("2020-08-05"), y=.04, label="Lower risk (CDC)", color = "#008080", size=3) +
+  geom_hline(yintercept=0.05, linetype="dashed", 
+                color = "#b4c8a8", size=0.5) +
+      annotate(geom="text",x=as.Date("2020-08-05"), y=.06, label="Moderate risk (CDC)", color = "#b4c8a8", size=3) +
+  geom_hline(yintercept=0.08, linetype="dashed", 
+                color = "#edbb8a", size=0.5) +
+    annotate(geom="text",x=as.Date("2020-08-05"), y=.09, label="Higher risk (CDC)", color = "#edbb8a", size=3) +
+  geom_hline(yintercept=0.10, linetype="dashed", 
+                color = "#ca562c", size=0.5) +
+    annotate(geom="text",x=as.Date("2020-08-05"), y=.11, label="Highest Risk (CDC)", color = "#ca562c", size=3) +
+  theme_bw())
+```
+
+
 
 
 ```{r include = FALSE}
