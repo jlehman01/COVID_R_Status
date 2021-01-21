@@ -194,18 +194,19 @@ pct_positive_by_zip_complete <- pct_positive_by_zip %>%
          NEG_imputed = na.approx(NEG),
          POS_new = POS_imputed - lag(POS_imputed, n=1),
          NEG_new = NEG_imputed - lag(NEG_imputed, n=1),
+         POS_new_7_mean = rollmean(POS_new, 7, align = "right", na.pad=TRUE)
          PCT_positive_day = POS_new/NEG_new,
-         POS_14_day_cum = rollapplyr(POS_new, width = 14, FUN = sum, partial = TRUE),
-         NEG_14_day_cum = rollapplyr(NEG_new, width = 14, FUN = sum, partial = TRUE),
-         PCT_postive_14_day = POS_14_day_cum/NEG_14_day_cum)
+         POS_7_day_cum = rollapplyr(POS_new, width = 7, FUN = sum, partial = TRUE),
+         NEG_7_day_cum = rollapplyr(NEG_new, width = 7, FUN = sum, partial = TRUE),
+         PCT_postive_7_day = POS_7_day_cum/NEG_7_day_cum)
 
 
 
 
-ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_day)) + 
+ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_7_day)) + 
   geom_line(aes(color = as.character(zip_code))) +
   xlab("") +
-  ylab("Portion Positive (14-day rolling average)") +
+  ylab("Portion Positive (7-day rolling average)") +
   ggtitle("Percent Positive by Phila Zip") +
   geom_hline(yintercept=.03, linetype="dashed", 
                 color = "#008080", size=0.5) +
@@ -226,10 +227,10 @@ ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_14_d
 
 ```{r philadelphia new positive tests per day by zip}
 
-ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = POS_new)) + 
+ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = POS_new_7_mean)) + 
   geom_line(aes(color = as.character(zip_code))) +
   xlab("") +
-  ylab("New Positive Tests Per Day per ZIP") +
+  ylab("New Positive Tests Per Day per ZIP (7-day mean)") +
   ggtitle("New Positive Cases Per Day by ZIP (interpolated NA)") +
   geom_hline(yintercept=.03, linetype="dashed", 
                 color = "#008080", size=0.5) +
@@ -287,9 +288,9 @@ lanc_icu <- ggplot(lancaster_icu, aes(x=date, y=number)) +
        x="") +
     theme_bw()
 
-ggplotly(phil_icu)
+phil_icu
 
-ggplotly(lanc_icu)
+lanc_icu
 
 ```
 
