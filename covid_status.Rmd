@@ -50,9 +50,11 @@ url <- URLencode("https://phl.carto.com/api/v2/sql?q=SELECT * FROM covid_cases_b
 data_import <- fromJSON(url)
 
 test_data <- data_import$rows %>% 
-  select(-etl_timestamp, -the_geom_webmercator, -the_geom, -cartodb_id) %>% 
-  mutate(collection_date = as.Date(collection_date,'%Y-%m-%d')) %>% 
+  select(-etl_timestamp, -the_geom_webmercator, -the_geom, -cartodb_id)%>% 
+  mutate(collection_date = as.Date(collection_date,'%Y-%m-%d'))%>% 
   pivot_wider(collection_date, names_from = "test_result", values_from = "count") %>% 
+  mutate(positive = replace_na(positive, 0)) %>% 
+  drop_na() %>% 
   complete(collection_date = full_seq(collection_date, period = 1), fill = list(negative = 0, positive = 0)) 
 
 #remove 2 most recent days, as data is consistently low
