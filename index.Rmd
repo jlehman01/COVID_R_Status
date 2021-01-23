@@ -198,9 +198,7 @@ pct_positive_by_zip_complete <- pct_positive_by_zip %>%
          PCT_positive_day = POS_new/NEG_new,
          POS_7_day_cum = rollapplyr(POS_new, width = 7, FUN = sum, partial = TRUE),
          NEG_7_day_cum = rollapplyr(NEG_new, width = 7, FUN = sum, partial = TRUE),
-         PCT_postive_7_day = POS_7_day_cum/NEG_7_day_cum)
-
-
+         PCT_postive_7_day = POS_7_day_cum/NEG_7_day_cum))
 
 
 ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_7_day)) + 
