@@ -23,6 +23,8 @@ library(lubridate)
 library(plotly)
 
 options(scipen = 999) 
+
+options(timeout= 4000000) 
 ```
 
 The purpose of this website is to apply COVID-19 school recommendations from trusted sources to the current situation in Philadelphia. To this end, recommended measures and thresholds from the following publications are calculated, and published recommendations based on these indicators are presented.

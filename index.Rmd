@@ -22,7 +22,9 @@ library(lubridate)
 library(plotly)
 library(ggpmisc)
 
-options(scipen = 999) 
+options(scipen = 999)
+
+options(timeout= 4000000) 
 ```
 
 *Notice: This website is a personal project and is not intended for public use. Please do not use this site as a source for reliable information on COVID.*
