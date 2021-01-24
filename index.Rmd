@@ -197,8 +197,13 @@ pct_positive_by_zip_complete <- pct_positive_by_zip %>%
          POS_new_7_mean = rollmean(POS_new, 7, align = "right", na.pad=TRUE),
          PCT_positive_day = POS_new/NEG_new,
          POS_7_day_cum = rollapplyr(POS_new, width = 7, FUN = sum, partial = TRUE),
+         POS_14_day_cum = rollapplyr(POS_new, width = 14, FUN = sum, partial = TRUE),
          NEG_7_day_cum = rollapplyr(NEG_new, width = 7, FUN = sum, partial = TRUE),
-         PCT_postive_7_day = POS_7_day_cum/NEG_7_day_cum)
+         PCT_postive_7_day = POS_7_day_cum/NEG_7_day_cum,
+         POS_14_day_per_100000 = case_when(
+           zip_code == 19143 ~ POS_14_day_cum / 64849*100000,
+           zip_code == 19104 ~ POS_14_day_cum / 51808*100000,
+           zip_code == 19103 ~ POS_14_day_cum / 22940*100000))
 
 ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_7_day)) + 
   geom_line(aes(color = as.character(zip_code))) +
@@ -220,6 +225,42 @@ ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = PCT_postive_7_da
   theme_bw())
 
 ```
+
+```{r}
+
+ggplotly(ggplot(pct_positive_by_zip_complete, aes(x = date, y = POS_14_day_per_100000)) + 
+  geom_line(aes(color = as.character(zip_code))) +
+  xlab("") +
+  ylab("New Positive Tests over 14 Days per 100,000") +
+  ggtitle("New Positive Cases over 14 Days by ZIP per 100,000") +
+  geom_hline(yintercept=.03, linetype="dashed", 
+                color = "#008080", size=0.5) +
+        annotate(geom="text",x=as.Date("2020-08-05"), y=.04, label="Lower risk (CDC)", color = "#008080", size=3) +
+  geom_hline(yintercept=0.05, linetype="dashed", 
+                color = "#b4c8a8", size=0.5) +
+      annotate(geom="text",x=as.Date("2020-08-05"), y=.06, label="Moderate risk (CDC)", color = "#b4c8a8", size=3) +
+  geom_hline(yintercept=0.08, linetype="dashed", 
+                color = "#edbb8a", size=0.5) +
+    annotate(geom="text",x=as.Date("2020-08-05"), y=.09, label="Higher risk (CDC)", color = "#edbb8a", size=3) +
+  geom_hline(yintercept=0.10, linetype="dashed", 
+                color = "#ca562c", size=0.5) +
+    annotate(geom="text",x=as.Date("2020-08-05"), y=.11, label="Highest Risk (CDC)", color = "#ca562c", size=3) +
+  geom_hline(yintercept=5, linetype="dashed", 
+                color = "#008080", size=0.5) +
+  annotate(geom="text",x=as.Date("2020-08-05"), y=10, label="Lower risk (CDC)", color = "#008080", size=3) +
+  geom_hline(yintercept=20, linetype="dashed", 
+                color = "#b4c8a8", size=0.5) +
+       annotate(geom="text",x=as.Date("2020-08-05"), y=25, label="Moderate risk (CDC)", color = "#b4c8a8", size=3) +
+  geom_hline(yintercept=50, linetype="dashed", 
+                color = "#edbb8a", size=0.5) +
+      annotate(geom="text",x=as.Date("2020-08-05"), y=55, label="Higher risk (CDC)", color = "#edbb8a", size=3) +
+  geom_hline(yintercept=200, linetype="dashed", 
+                color = "#ca562c", size=0.5) +
+      annotate(geom="text",x=as.Date("2020-08-05"), y=205, label="Highest Risk (CDC)", color = "#ca562c", size=3) +
+    theme_bw())
+```
+
+
 
 
 ```{r philadelphia new positive tests per day by zip}
@@ -287,7 +328,9 @@ lanc_icu <- ggplot(lancaster_icu, aes(x=date, y=number)) +
 
 phil_icu
 
-lanc_icu
+```
 
+```{r}
+lanc_icu
 ```
 
