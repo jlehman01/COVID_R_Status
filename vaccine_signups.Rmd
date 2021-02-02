@@ -1,6 +1,5 @@
 ---
-title: "COVID Testing &  Guidance for Schools"
-subtitle: "CDC, PA Department of Education, and CHOP Recommendations Based on Current COVID Indicators in Philadelphia."
+title: "COVID Vaccine Signups: Sites Within 40 Minutes of Monterey"
 output:
   rmarkdown::html_document:
     theme: flatly
@@ -15,14 +14,119 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(tidyverse)
 library(jsonlite)
 library(tidyr)
-library(zoo)
-library(plotly)
 library(kableExtra)
 library(data.table)
 library(lubridate)
-library(plotly)
+library(sf)
+library(geojsonio)
+library(remotes)
+library(esri2sf)
+library(mapboxapi)
+library(tmap)
+
+tmap_mode("view")
 
 options(scipen = 999) 
 
 options(timeout= 4000000) 
 ```
+
+Notice: This is a personal website for research purposes. It is not intended to provide accurate information. Please use other resources.
+
+```{r, echo=FALSE, results = 'asis'}
+
+today <- today()
+cat("Data last updated ", format(today, format= "%B %d %Y"))
+```
+
+```{r, include = FALSE}
+
+# drive_40min <- mb_isochrone("34 W Eby Rd, Leola, PA 17540",
+#                           profile = "driving",
+#                           time = 40)
+# 
+# saveRDS(drive_40min, "drive_40min.rds")
+
+```
+
+```{r, results = 'hide'}
+
+drive_40min <- readRDS("drive_40min.rds") %>% 
+  st_transform(3362)
+
+url <- "https://services1.arcgis.com/Nifc7wlHaBPig3Q3/arcgis/rest/services/Vaccine_Provider_Contact_Form_VIEW/FeatureServer/0"
+
+vaccine_points <- esri2sf(url) %>% 
+  st_transform(3362)
+
+vaccine_points_in_drive <- st_filter(vaccine_points, drive_40min, .predicate = st_intersects) %>% 
+  select(CompanyName, EntityName, FullAddress, FacilityType, PublicLink, VaccineYesNo, Notes, POCname, POCphone, POCemail)
+
+vaccine_points_in_drive$VaccineYesNo <- replace_na(vaccine_points_in_drive$VaccineYesNo, "No Data")
+
+vaccine_points_in_drive$VaccineYesNo <- str_replace(vaccine_points_in_drive$VaccineYesNo, "NotReceived", "Not Received")
+
+unique_websites <- vaccine_points_in_drive %>% 
+  st_drop_geometry() %>% 
+  group_by(PublicLink) %>% 
+  summarise(CompanyName = first(CompanyName))
+
+unique_phone <- vaccine_points_in_drive %>% 
+  st_drop_geometry() %>% 
+  group_by(POCphone) %>% 
+  summarise(CompanyName = first(CompanyName))
+
+```
+
+## Unique Signup Websites Within 40 Minutes of Monterey
+
+This is a consolidated list of unique website signup links. Each link will include at least one signup facility within a 40 minute drive of Monterey.
+
+```{r}
+
+unique_websites %>% 
+  mutate(PublicLink = cell_spec(PublicLink, "html", link = PublicLink)) %>% 
+  kbl("html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+
+```
+
+## Unique Phone Numbers Within 40 Minutes of Monterey
+
+```{r}
+
+unique_phone %>% 
+  kbl() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+```
+
+## All Vaccine Sites within 40 Minutes of Monterey
+
+### Map of All Vaccine Sites
+
+```{r, fig.width = 10, fig.height = 5}
+
+popup_columns <- names(vaccine_points_in_drive %>% st_drop_geometry())
+
+tm_shape(drive_40min) + tm_borders(lwd = 2) +
+  tm_shape(vaccine_points_in_drive) + tm_dots(col = "VaccineYesNo", 
+                                            title = "Vaccine Receipved Yet?",
+                                            palette = "viridis",
+                                            size = 0.04,
+                                            popup.vars = popup_columns) +
+  tm_basemap("CartoDB.Positron")
+
+```
+
+### Table of All Vaccine Sites
+
+```{r}
+vaccine_points_in_drive %>%
+  st_drop_geometry() %>% 
+  mutate(PublicLink = cell_spec(PublicLink, "html", link = PublicLink)) %>% 
+  kbl("html", escape = FALSE) %>% kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+
+```
+
