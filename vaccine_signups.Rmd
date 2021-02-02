@@ -114,7 +114,7 @@ tm_shape(drive_40min) + tm_borders(lwd = 2) +
   tm_shape(vaccine_points_in_drive) + tm_dots(col = "VaccineYesNo", 
                                             title = "Vaccine Receipved Yet?",
                                             palette = "viridis",
-                                            size = 0.04,
+                                            size = 0.08,
                                             popup.vars = popup_columns) +
   tm_basemap("CartoDB.Positron")
 
