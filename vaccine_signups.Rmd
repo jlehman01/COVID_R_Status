@@ -41,7 +41,7 @@ cat("Data last updated ", format(today, format= "%B %d %Y"))
 
 ```{r, include = FALSE}
 
-# drive_40min <- mb_isochrone("34 W Eby Rd, Leola, PA 17540",
+# drive_40min <- mb_isochrone("Leola, PA 17540",
 #                           profile = "driving",
 #                           time = 40)
 # 

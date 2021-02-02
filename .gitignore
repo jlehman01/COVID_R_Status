@@ -43,3 +43,6 @@ covid_status.Rmd
 /docs/covid19-philadelphia-master
 /docs/covid_archive_github.zip
 /docs/.DS_Store
+vaccine_signups.Rmd
+drive_40min.rds
+COVID_R_Status.Rproj
