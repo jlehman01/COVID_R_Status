@@ -51,6 +51,13 @@ cat("Data last updated ", format(today, format= "%B %d %Y"))
 
 ```{r, results = 'hide'}
 
+links <- c("https://www.wegmans.com/covid-vaccine-registration/", "https://giantsched.rxtouch.com/rbssched/program/covid19/Patient/Advisory", "https://covidinfo.reportsonline.com/covidinfo/GiantFood.html?queueittoken=e_giantfoodcovid19~q_cffbce75-75e1-4643-be70-ee6cd5d90735~ts_1612269313~ce_true~rt_safetynet~h_6021c466cb22ba819262fcba678c3655927c7a23e03a5e7ce338ab0667274b05", "https://www.wegmans.com/covid-vaccine-registration/")
+
+names <- c("Wegmans Signup Link", "Giant Pharmacy Signup (Local Giants)", "The Other Kind of Giant Pharmacy Signup (further drive, still worthwhile)", "Wegmans Pharmacy Direct Link")
+
+manual_add_links <- data.frame(names, links)
+
+
 drive_40min <- readRDS("drive_40min.rds") %>% 
   st_transform(3362)
 
@@ -85,12 +92,24 @@ This is a consolidated list of unique website signup links. Each link will inclu
 ```{r}
 
 unique_websites %>% 
-  mutate(PublicLink = cell_spec(PublicLink, "html", link = PublicLink)) %>% 
+  mutate(PublicLink = cell_spec(PublicLink, "html", link = PublicLink, new_tab = TRUE)) %>% 
   kbl("html", escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 
 
 ```
+
+### Additional website links found by manually searching
+
+```{r}
+
+manual_add_links %>% 
+  mutate(names = cell_spec(names, "html", link = links, new_tab = TRUE)) %>%
+  select(names) %>% 
+  kbl("html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
 
 ## Unique Phone Numbers Within 40 Minutes of Monterey
 
@@ -110,7 +129,7 @@ unique_phone %>%
 
 popup_columns <- names(vaccine_points_in_drive %>% st_drop_geometry())
 
-tm_shape(drive_40min) + tm_borders(lwd = 2) +
+tm_shape(drive_40min) + tm_borders(lwd = 2, col = "#6699cc") +
   tm_shape(vaccine_points_in_drive) + tm_dots(col = "VaccineYesNo", 
                                             title = "Vaccine Receipved Yet?",
                                             palette = "viridis",

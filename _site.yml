@@ -1,9 +1,0 @@
-name: "Tracking COVID"
-navbar:
-  title: "Tracking Covid"
-  left:
-    - text: "General Indicators"
-      href: index.html
-    - text: "School Guidance"
-      href: covid_status.html
-output_dir: "docs"
