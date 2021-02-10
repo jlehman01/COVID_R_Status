@@ -46,10 +46,12 @@ covid_status.Rmd
 vaccine_signups.Rmd
 drive_40min.rds
 COVID_R_Status.Rproj
+vaccine_signups_newholland.Rmd
 index.Rmd
 .Rdata
 .Rhistory
 _site.yml
 build_site.R
+drive_40min_new_holland.rds
 covid_archive_github.zip
 
