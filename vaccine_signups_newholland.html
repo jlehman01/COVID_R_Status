@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>COVID Vaccine Signups: Sites Within 40 Minutes of New Holland</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Tracking Covid</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">General Indicators</a>
+</li>
+<li>
+  <a href="covid_status.html">School Guidance</a>
+</li>
+<li>
+  <a href="vaccine_signups.html">Vaccines</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">COVID Vaccine Signups: Sites Within 40
+Minutes of New Holland</h1>
+
+</div>
+
+
+<p>Notice: This is a personal website for research purposes. It is not
+intended to provide accurate information. Please use other resources for
+finding accurate information on COVID and do not share this link.</p>
+<p>Data last updated March 24 2022</p>
+<div id="unique-signup-websites-within-40-minutes-of-new-holland"
+class="section level2">
+<h2>Unique Signup Websites Within 40 Minutes of New Holland</h2>
+<p>This is a consolidated list of unique website signup links. Each link
+will include at least one signup facility within a 40 minute drive of
+New Holland</p>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Website
+</th>
+<th style="text-align:left;">
+Facility_Name
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="http://lghealth.org/vaccine" style="     " target="_blank">http://lghealth.org/vaccine</a>
+</td>
+<td style="text-align:left;">
+LGH-Lancaster General Hospital
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="http://www.lghealthexpress.org/?y_source=1_ODQ1Mjk0MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D" style="     " target="_blank">http://www.lghealthexpress.org/?y_source=1_ODQ1Mjk0MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D</a>
+</td>
+<td style="text-align:left;">
+LGH Express at Crooked Oak
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="http://www.mcelroypharmacy.com/" style="     " target="_blank">http://www.mcelroypharmacy.com/</a>
+</td>
+<td style="text-align:left;">
+McElroy Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="http://www.ncspharmacy.com/" style="     " target="_blank">http://www.ncspharmacy.com/</a>
+</td>
+<td style="text-align:left;">
+NCS Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     " target="_blank">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+<td style="text-align:left;">
+Weis Pharmacy-17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://customscripts.us/covid-19-vaccine/" style="     " target="_blank">https://customscripts.us/covid-19-vaccine/</a>
+</td>
+<td style="text-align:left;">
+Custom Prescriptions of Lancaster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://lancasterhealthcenter.org/" style="     " target="_blank">https://lancasterhealthcenter.org/</a>
+</td>
+<td style="text-align:left;">
+Lancaster Health Center-Arch
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://lancped.com/" style="     " target="_blank">https://lancped.com/</a>
+</td>
+<td style="text-align:left;">
+Lancaster Pediatric Associates-Willow Street
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://readingpediatrics.com/" style="     " target="_blank">https://readingpediatrics.com/</a>
+</td>
+<td style="text-align:left;">
+Reading Pediatrics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://vaccinatelancaster.org/162/Lancaster-Co-Community-Vaccination-Cente" style="     " target="_blank">https://vaccinatelancaster.org/162/Lancaster-Co-Community-Vaccination-Cente</a>
+</td>
+<td style="text-align:left;">
+LC Com VC Ctr
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://vaccine.upmc.com/" style="     " target="_blank">https://vaccine.upmc.com/</a>
+</td>
+<td style="text-align:left;">
+UPMC Pinnacle Lititz
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.Andersononmain.com" style="     " target="_blank">https://www.Andersononmain.com</a>
+</td>
+<td style="text-align:left;">
+Anderson Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.childrensclinicofwyo.com/" style="     " target="_blank">https://www.childrensclinicofwyo.com/</a>
+</td>
+<td style="text-align:left;">
+Childrens Clinic of Wyomissing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.cnsoccmed.com/services/covid-19-services/covid-19-vaccine/" style="     " target="_blank">https://www.cnsoccmed.com/services/covid-19-services/covid-19-vaccine/</a>
+</td>
+<td style="text-align:left;">
+Compliance Navigation Specialists DBA CNS Occ
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.HillcrestLancaster.com" style="     " target="_blank">https://www.HillcrestLancaster.com</a>
+</td>
+<td style="text-align:left;">
+Hillcrest Pharmacy Compounding of Lancaster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines" style="     " target="_blank">https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines</a>
+</td>
+<td style="text-align:left;">
+LGH-Lititz Family Medicine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.lancastergeneralhealth.org/patient-and-visitor-information/find-a-location/crooked-oak?y_source=1_ODM2OTc3Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D" style="     " target="_blank">https://www.lancastergeneralhealth.org/patient-and-visitor-information/find-a-location/crooked-oak?y_source=1_ODM2OTc3Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D</a>
+</td>
+<td style="text-align:left;">
+LGH-Crooked Oak Family Medicine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.lemsa.com/vaccineSignup.asp" style="     " target="_blank">https://www.lemsa.com/vaccineSignup.asp</a>
+</td>
+<td style="text-align:left;">
+Lancaster EMS
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.oaksidecarepharmacy.com/covid-19-vaccination" style="     " target="_blank">https://www.oaksidecarepharmacy.com/covid-19-vaccination</a>
+</td>
+<td style="text-align:left;">
+OAKSIDE CARE PHARMACY
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     " target="_blank">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+<td style="text-align:left;">
+RITE AID STORE #11142
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.shillingtonms.com/pharmacy-request-covid-19-vaccine" style="     " target="_blank">https://www.shillingtonms.com/pharmacy-request-covid-19-vaccine</a>
+</td>
+<td style="text-align:left;">
+The Medicine Shoppe 2057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.sloanspharmacies.com/" style="     " target="_blank">https://www.sloanspharmacies.com/</a>
+</td>
+<td style="text-align:left;">
+VDI-Sloans Mountville Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.stauffersdrugstore.com/covid-19-vaccine-info" style="     " target="_blank">https://www.stauffersdrugstore.com/covid-19-vaccine-info</a>
+</td>
+<td style="text-align:left;">
+VDI-Stauffers Drug Store
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.stauffersdrugstore.com/long-term-care" style="     " target="_blank">https://www.stauffersdrugstore.com/long-term-care</a>
+</td>
+<td style="text-align:left;">
+Stauffers LTC Pharmacy-New Holland 2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.wegmans.com/pharmacy/" style="     " target="_blank">https://www.wegmans.com/pharmacy/</a>
+</td>
+<td style="text-align:left;">
+Wegmans Pharmacy #050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.wellspan.org/covid19" style="     " target="_blank">https://www.wellspan.org/covid19</a>
+</td>
+<td style="text-align:left;">
+WELLSPAN EPHRATA COMMUNITY HOSPITAL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.wellspan.org/offices-locations/wellspan-family-medicine-lake-street/" style="     " target="_blank">https://www.wellspan.org/offices-locations/wellspan-family-medicine-lake-street/</a>
+</td>
+<td style="text-align:left;">
+Wellspan Family Medicine-Lake Street
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="NA" style="     " target="_blank">NA</a>
+</td>
+<td style="text-align:left;">
+Chester County Pediatrics-Exton
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="manually-added-signup-websites" class="section level2">
+<h2>Manually Added Signup Websites</h2>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+names
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.wegmans.com/covid-vaccine-registration/" style="     " target="_blank">Wegmans
+Signup Link</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://giantsched.rxtouch.com/rbssched/program/covid19/Patient/Advisory" style="     " target="_blank">Giant
+Pharmacy Signup (Local Giants)</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://covidinfo.reportsonline.com/covidinfo/GiantFood.html?queueittoken=e_giantfoodcovid19~q_cffbce75-75e1-4643-be70-ee6cd5d90735~ts_1612269313~ce_true~rt_safetynet~h_6021c466cb22ba819262fcba678c3655927c7a23e03a5e7ce338ab0667274b05" style="     " target="_blank">The
+Other Kind of Giant Pharmacy Signup (further drive, still
+worthwhile)</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="unique-phone-numbers-within-40-minutes-of-perkasie"
+class="section level2">
+<h2>Unique Phone Numbers Within 40 Minutes of Perkasie</h2>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Phone_Number
+</th>
+<th style="text-align:left;">
+Facility_Name
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1-844-876-2822
+</td>
+<td style="text-align:left;">
+UPMC Pinnacle Lititz
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1-844-905-1250
+</td>
+<td style="text-align:left;">
+Lancaster Health Center-Arch
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+484-663-5760
+</td>
+<td style="text-align:left;">
+OAKSIDE CARE PHARMACY
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+610-373-5241
+</td>
+<td style="text-align:left;">
+RITE AID STORE #00467
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+610-374-7400
+</td>
+<td style="text-align:left;">
+Reading Pediatrics
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+610-378-1722
+</td>
+<td style="text-align:left;">
+Childrens Clinic of Wyomissing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+610-777-2313
+</td>
+<td style="text-align:left;">
+The Medicine Shoppe 2057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+610-857-6648
+</td>
+<td style="text-align:left;">
+LGH-Parkesburg Family Medicine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+610-873-5437
+</td>
+<td style="text-align:left;">
+Chester County Pediatrics-Exton
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-283-1184
+</td>
+<td style="text-align:left;">
+Hillcrest Pharmacy Compounding of Lancaster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-285-7443
+</td>
+<td style="text-align:left;">
+VDI-Sloans Mountville Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-291-5931
+</td>
+<td style="text-align:left;">
+Lancaster Pediatric Associates-Willow Street
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-336-2292
+</td>
+<td style="text-align:left;">
+Anderson Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-355-9300
+</td>
+<td style="text-align:left;">
+Stauffers LTC Pharmacy-New Holland 2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-393-0518
+</td>
+<td style="text-align:left;">
+Custom Prescriptions of Lancaster
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-509-6259
+</td>
+<td style="text-align:left;">
+NCS Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-544-5700
+</td>
+<td style="text-align:left;">
+LGH-Lancaster General Hospital
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-569-2678
+</td>
+<td style="text-align:left;">
+LGH-Crooked Oak Family Medicine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-588-1020
+</td>
+<td style="text-align:left;">
+LC Com VC Ctr
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-626-2222
+</td>
+<td style="text-align:left;">
+McElroy Pharmacy
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-687-6058
+</td>
+<td style="text-align:left;">
+VDI-Wiley Pharmacy Of Strasburg
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-687-9407
+</td>
+<td style="text-align:left;">
+Clinic for Special Children
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-721-7718
+</td>
+<td style="text-align:left;">
+Wellspan Family Medicine-Lake Street
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-735-3995
+</td>
+<td style="text-align:left;">
+LGH Express at Crooked Oak
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+717-872-4688
+</td>
+<td style="text-align:left;">
+Lancaster EMS
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+800-551-9816
+</td>
+<td style="text-align:left;">
+Compliance Navigation Specialists DBA CNS Occ
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+855-851-3641
+</td>
+<td style="text-align:left;">
+WELLSPAN EPHRATA COMMUNITY HOSPITAL
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+RITE AID STORE #11142
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="all-vaccine-sites-within-40-minutes-of-perkasie"
+class="section level2">
+<h2>All Vaccine Sites within 40 Minutes of Perkasie</h2>
+<div id="map-of-all-vaccine-sites" class="section level3">
+<h3>Map of All Vaccine Sites</h3>
+<div id="htmlwidget-54da509d453314d2e5c0" style="width:960px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-54da509d453314d2e5c0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"createMapPane","args":["tmap402",402]},{"method":"addProviderTiles","args":["CartoDB.Positron",null,"CartoDB.Positron",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addPolygons","args":[[[[{"lng":[-75.9249820000014,-75.9229940000014,-75.9241340000014,-75.9295570000014,-75.9322360000014,-75.9371580000014,-75.9415280000014,-75.9421040000014,-75.9438580000014,-75.9420670000014,-75.9491580000014,-75.9503550000014,-75.9461580000014,-75.9414980000014,-75.9364830000014,-75.9311580000014,-75.9281580000014,-75.9233700000014,-75.9199710000014,-75.9239330000014,-75.9199550000014,-75.9200770000014,-75.9161580000014,-75.9131580000014,-75.9101580000014,-75.8960090000014,-75.8954210000014,-75.8927510000014,-75.8918220000014,-75.8882790000014,-75.8921580000014,-75.8927280000014,-75.8883150000014,-75.8866800000014,-75.8792040000014,-75.8792810000014,-75.8815560000014,-75.8831580000014,-75.8858220000014,-75.8831580000014,-75.8711580000014,-75.8666470000014,-75.8657010000014,-75.8641110000014,-75.8591580000014,-75.8531580000014,-75.8501580000014,-75.8446100000014,-75.8427560000014,-75.8361270000014,-75.8381580000014,-75.8418560000014,-75.8413450000014,-75.8381580000014,-75.8321580000014,-75.8279580000014,-75.8262930000014,-75.8270810000014,-75.8348370000014,-75.8225530000014,-75.8170130000014,-75.8171580000014,-75.8232850000014,-75.8261580000014,-75.8281240000014,-75.8332320000014,-75.8351580000014,-75.8370000000014,-75.8349890000014,-75.8381580000014,-75.8411580000014,-75.8441580000014,-75.8531580000014,-75.8550980000014,-75.8569200000014,-75.8561580000014,-75.8517010000014,-75.8501580000014,-75.8411580000014,-75.8395320000014,-75.8343410000014,-75.8291580000014,-75.8261580000014,-75.8172750000014,-75.8201580000014,-75.8291580000014,-75.8321580000014,-75.8392860000014,-75.8421380000014,-75.8435670000014,-75.8422790000014,-75.8433230000014,-75.8511070000014,-75.8526580000014,-75.8514450000014,-75.8554280000014,-75.8561580000014,-75.8586660000014,-75.8621580000014,-75.8660280000014,-75.8684770000014,-75.8661910000014,-75.8675050000014,-75.8777910000014,-75.8771580000014,-75.8741580000014,-75.8729750000014,-75.8701700000014,-75.8753360000014,-75.8749230000014,-75.8667490000014,-75.8655880000014,-75.8688630000014,-75.8663800000014,-75.8651580000014,-75.8614930000014,-75.8601480000014,-75.8553720000014,-75.8550190000014,-75.8566600000014,-75.8536620000014,-75.8494810000014,-75.8519150000014,-75.8567040000014,-75.8561580000014,-75.8527200000014,-75.8485960000014,-75.8455380000014,-75.8465660000014,-75.8441580000014,-75.8402210000014,-75.8417520000014,-75.8351580000014,-75.8291580000014,-75.8231580000014,-75.8177950000014,-75.8178950000014,-75.8206220000014,-75.8261580000014,-75.8381580000014,-75.8445930000014,-75.8411580000014,-75.8364100000014,-75.8327580000014,-75.8359250000014,-75.8361470000014,-75.8389860000014,-75.8363480000014,-75.8360700000014,-75.8391650000014,-75.8441580000014,-75.8477610000014,-75.8426490000014,-75.8414760000014,-75.8390790000014,-75.8381580000014,-75.8369420000014,-75.8291580000014,-75.8238740000014,-75.8275690000014,-75.8201580000014,-75.8171580000014,-75.8141930000014,-75.8141580000014,-75.8040740000014,-75.8021580000014,-75.7983350000014,-75.8088190000014,-75.8094440000014,-75.8111580000014,-75.8153460000014,-75.8171580000014,-75.8183440000014,-75.8234960000014,-75.8241490000014,-75.8294480000014,-75.8297460000014,-75.8241880000014,-75.8234660000014,-75.8187070000014,-75.8137490000014,-75.8111580000014,-75.8046410000014,-75.8032940000014,-75.7961580000014,-75.7950190000014,-75.7947050000014,-75.7972220000014,-75.7999250000014,-75.7997100000014,-75.7867630000014,-75.7871580000014,-75.7911610000014,-75.7942350000014,-75.7946310000014,-75.7923740000014,-75.7917860000014,-75.7901580000014,-75.7871580000014,-75.7841580000014,-75.7776050000014,-75.7741890000014,-75.7730120000014,-75.7753060000014,-75.7730840000014,-75.7705340000014,-75.7653150000014,-75.7618990000014,-75.7698640000014,-75.7691580000014,-75.7619050000014,-75.7601580000014,-75.7573660000014,-75.7595230000014,-75.7640390000014,-75.7638620000014,-75.7601580000014,-75.7571580000014,-75.7541580000014,-75.7511580000014,-75.7481580000014,-75.7426240000014,-75.7421580000014,-75.7414490000014,-75.7443970000014,-75.7488990000014,-75.7481580000014,-75.7451580000014,-75.7440310000014,-75.7391580000014,-75.7377530000014,-75.7323250000014,-75.7322000000014,-75.7344020000014,-75.7331580000014,-75.7266070000014,-75.7286950000014,-75.7241580000014,-75.7181580000014,-75.7151580000014,-75.7114280000014,-75.7061580000014,-75.7031580000014,-75.6929670000014,-75.6851580000014,-75.6821580000014,-75.6821580000014,-75.6881580000014,-75.6911580000014,-75.6941580000014,-75.7001580000014,-75.6986620000014,-75.7001580000014,-75.7181580000014,-75.7189830000014,-75.7122670000014,-75.7151580000014,-75.7167240000014,-75.7211580000014,-75.7241580000014,-75.7301580000014,-75.7361580000014,-75.7426620000014,-75.7421580000014,-75.7271350000014,-75.7369170000014,-75.7381520000014,-75.7361580000014,-75.7331580000014,-75.7266950000014,-75.7301580000014,-75.7331580000014,-75.7398870000014,-75.7401380000014,-75.7369980000014,-75.7380950000014,-75.7431100000014,-75.7451580000014,-75.7481580000014,-75.7635010000014,-75.7612170000014,-75.7605670000014,-75.7584340000014,-75.7571580000014,-75.7421580000014,-75.7361580000014,-75.7301580000014,-75.7134470000014,-75.7151580000014,-75.7190590000014,-75.7189510000014,-75.7201870000014,-75.7231490000014,-75.7271580000014,-75.7301620000014,-75.7331580000014,-75.7346580000014,-75.7353190000014,-75.7481580000014,-75.7496740000014,-75.7541580000014,-75.7566740000014,-75.7618430000014,-75.7627330000014,-75.7649180000014,-75.7658000000014,-75.7711820000014,-75.7718410000014,-75.7742340000014,-75.7751580000014,-75.7760720000014,-75.7786420000014,-75.7792490000014,-75.7814510000014,-75.7758040000014,-75.7751580000014,-75.7698270000014,-75.7691580000014,-75.7638500000014,-75.7631580000014,-75.7578800000014,-75.7575210000014,-75.7549080000014,-75.7541580000014,-75.7481580000014,-75.7425150000014,-75.7391580000014,-75.7350450000014,-75.7361580000014,-75.7415380000014,-75.7451580000014,-75.7454360000014,-75.7340530000014,-75.7334590000014,-75.7251720000014,-75.7211580000014,-75.7121580000014,-75.7049970000014,-75.7031580000014,-75.6990530000014,-75.6971580000014,-75.6929660000014,-75.6911580000014,-75.6821580000014,-75.6791580000014,-75.6701580000014,-75.6671580000014,-75.6611580000014,-75.6576740000014,-75.6551580000014,-75.6521580000014,-75.6491580000014,-75.6310100000014,-75.6309010000014,-75.6234100000014,-75.6313630000014,-75.6346990000014,-75.6371580000014,-75.6581580000014,-75.6611580000014,-75.6671580000014,-75.6681660000014,-75.6656790000014,-75.6619470000014,-75.6671580000014,-75.6688240000014,-75.6738760000014,-75.6750770000014,-75.6786960000014,-75.6842450000014,-75.6851580000014,-75.6941580000014,-75.6962240000014,-75.7013410000014,-75.7087650000014,-75.7135350000014,-75.7151580000014,-75.7262620000014,-75.7270300000014,-75.7300080000014,-75.7300990000014,-75.7316660000014,-75.7314650000014,-75.7391580000014,-75.7403910000014,-75.7421580000014,-75.7441770000014,-75.7458920000014,-75.7461440000014,-75.7407470000014,-75.7391580000014,-75.7361580000014,-75.7322350000014,-75.7307700000014,-75.7336630000014,-75.7304800000014,-75.7271580000014,-75.7211580000014,-75.7173410000014,-75.7181580000014,-75.7211580000014,-75.7220270000014,-75.7198340000014,-75.7189280000014,-75.7163090000014,-75.7088680000014,-75.7121580000014,-75.7134310000014,-75.7131370000014,-75.7107370000014,-75.7103090000014,-75.7075040000014,-75.7091580000014,-75.7104490000014,-75.7098000000014,-75.6997580000014,-75.7001580000014,-75.6932600000014,-75.6919870000014,-75.6890280000014,-75.6864320000014,-75.6851580000014,-75.6791580000014,-75.6761580000014,-75.6695970000014,-75.6671580000014,-75.6611580000014,-75.6602480000014,-75.6630230000014,-75.6671580000014,-75.6695710000014,-75.6677970000014,-75.6795990000014,-75.6761580000014,-75.6733310000014,-75.6671580000014,-75.6622510000014,-75.6641580000014,-75.6643760000014,-75.6581580000014,-75.6551580000014,-75.6431580000014,-75.6401580000014,-75.6352350000014,-75.6318360000014,-75.6267840000014,-75.6251580000014,-75.6105800000014,-75.6095930000014,-75.6101310000014,-75.6207890000014,-75.6238170000014,-75.6281580000014,-75.6311580000014,-75.6371580000014,-75.6401580000014,-75.6581580000014,-75.6611580000014,-75.6676570000014,-75.6679400000014,-75.6612740000014,-75.6613450000014,-75.6641580000014,-75.6695530000014,-75.6731580000014,-75.6774610000014,-75.6721580000014,-75.6774080000014,-75.6791580000014,-75.6826050000014,-75.6851580000014,-75.6888180000014,-75.6881580000014,-75.6857480000014,-75.6885570000014,-75.6932170000014,-75.6960520000014,-75.6941580000014,-75.6971580000014,-75.6981740000014,-75.7041570000014,-75.7039770000014,-75.7114410000014,-75.7121580000014,-75.7142440000014,-75.7211580000014,-75.7192270000014,-75.7217870000014,-75.7219720000014,-75.7278670000014,-75.7276000000014,-75.7265880000014,-75.7211580000014,-75.7210050000014,-75.7140140000014,-75.7137920000014,-75.7211580000014,-75.7301580000014,-75.7306120000014,-75.7361580000014,-75.7391580000014,-75.7427750000014,-75.7429750000014,-75.7451580000014,-75.7474020000014,-75.7495590000014,-75.7503220000014,-75.7519510000014,-75.7523220000014,-75.7511580000014,-75.7501300000014,-75.7528780000014,-75.7510730000014,-75.7525640000014,-75.7541580000014,-75.7601580000014,-75.7721580000014,-75.7737270000014,-75.7720320000014,-75.7744490000014,-75.7854550000014,-75.7878230000014,-75.7871580000014,-75.7811580000014,-75.7751580000014,-75.7721580000014,-75.7643570000014,-75.7661580000014,-75.7691580000014,-75.7731360000014,-75.7751890000014,-75.7787320000014,-75.7793970000014,-75.7811580000014,-75.7841580000014,-75.7871580000014,-75.7863340000014,-75.7913990000014,-75.7968850000014,-75.7991580000014,-75.8027730000014,-75.8016200000014,-75.8085460000014,-75.8097330000014,-75.8133250000014,-75.8134670000014,-75.8171580000014,-75.8181690000014,-75.8171580000014,-75.8141580000014,-75.8099590000014,-75.8156740000014,-75.8147140000014,-75.8111580000014,-75.8081580000014,-75.8021580000014,-75.7991580000014,-75.7910990000014,-75.7918780000014,-75.7877970000014,-75.7934860000014,-75.7948040000014,-75.8000540000014,-75.8011840000014,-75.8063290000014,-75.8081580000014,-75.8111580000014,-75.8141580000014,-75.8151560000014,-75.8130980000014,-75.8131590000014,-75.8171580000014,-75.8239650000014,-75.8261580000014,-75.8291580000014,-75.8312130000014,-75.8331450000014,-75.8351580000014,-75.8378400000014,-75.8375770000014,-75.8471580000014,-75.8505690000014,-75.8471580000014,-75.8430040000014,-75.8404810000014,-75.8388040000014,-75.8448420000014,-75.8483380000014,-75.8501580000014,-75.8515750000014,-75.8507550000014,-75.8515440000014,-75.8547890000014,-75.8548770000014,-75.8586200000014,-75.8588480000014,-75.8651580000014,-75.8659780000014,-75.8684300000014,-75.8681580000014,-75.8626680000014,-75.8602030000014,-75.8651580000014,-75.8663900000014,-75.8685170000014,-75.8691890000014,-75.8714890000014,-75.8692450000014,-75.8681580000014,-75.8646250000014,-75.8621580000014,-75.8520280000014,-75.8591580000014,-75.8626190000014,-75.8621580000014,-75.8582170000014,-75.8531580000014,-75.8471580000014,-75.8405790000014,-75.8401380000014,-75.8429660000014,-75.8430410000014,-75.8446660000014,-75.8375870000014,-75.8362760000014,-75.8375360000014,-75.8393980000014,-75.8395300000014,-75.8358540000014,-75.8344150000014,-75.8291580000014,-75.8253420000014,-75.8231580000014,-75.8207010000014,-75.8165680000014,-75.8191740000014,-75.8201580000014,-75.8300040000014,-75.8297010000014,-75.8261580000014,-75.8201580000014,-75.8141580000014,-75.8111580000014,-75.8088590000014,-75.8051580000014,-75.8033360000014,-75.7991580000014,-75.7847910000014,-75.7901580000014,-75.7961580000014,-75.7991580000014,-75.8021580000014,-75.8081580000014,-75.8096590000014,-75.8099000000014,-75.8081580000014,-75.8051580000014,-75.8021580000014,-75.7962280000014,-75.8084270000014,-75.8090270000014,-75.8058030000014,-75.7961580000014,-75.7921370000014,-75.7886130000014,-75.7925100000014,-75.7973440000014,-75.7973600000014,-75.7936410000014,-75.7948270000014,-75.8051580000014,-75.8081580000014,-75.8125780000014,-75.8141580000014,-75.8199810000014,-75.8231580000014,-75.8261580000014,-75.8280070000014,-75.8321580000014,-75.8343310000014,-75.8313740000014,-75.8351580000014,-75.8398640000014,-75.8369680000014,-75.8373560000014,-75.8421640000014,-75.8441580000014,-75.8531580000014,-75.8561580000014,-75.8613440000014,-75.8607860000014,-75.8574600000014,-75.8612250000014,-75.8681580000014,-75.8707330000014,-75.8733760000014,-75.8741580000014,-75.8752420000014,-75.8743460000014,-75.8828250000014,-75.8891580000014,-75.8887590000014,-75.8964830000014,-75.8987160000014,-75.8966300000014,-75.8905680000014,-75.8936160000014,-75.8951580000014,-75.8974490000014,-75.9041580000014,-75.9071580000014,-75.9095380000014,-75.9126080000014,-75.9161580000014,-75.9203580000014,-75.9242700000014,-75.9314580000014,-75.9288660000014,-75.9294210000014,-75.9218250000014,-75.9251580000014,-75.9287340000014,-75.9297070000014,-75.9401580000014,-75.9431580000014,-75.9515440000014,-75.9551580000014,-75.9617820000014,-75.9628910000014,-75.9681200000014,-75.9714970000014,-75.9752540000014,-75.9761580000014,-75.9768670000014,-75.9791580000014,-75.9814590000014,-75.9873930000014,-75.9879360000014,-75.9907930000014,-75.9912580000014,-75.9915890000014,-75.9887820000014,-75.9881580000014,-75.9851580000014,-75.9830020000014,-75.9781400000014,-75.9731750000014,-75.9805190000014,-75.9821580000014,-75.9838990000014,-75.9895520000014,-75.9911580000014,-75.9949830000014,-75.9923150000014,-75.9881580000014,-75.9863930000014,-75.9843080000014,-75.9841880000014,-75.9873410000014,-75.9755040000014,-75.9751460000014,-75.9802890000014,-75.9772210000014,-75.9701580000014,-75.9677280000014,-75.9662020000014,-75.9655590000014,-75.9630540000014,-75.9716430000014,-75.9674710000014,-75.9712860000014,-75.9731580000014,-75.9778670000014,-75.9701580000014,-75.9696740000014,-75.9821580000014,-75.9851580000014,-75.9867000000014,-75.9881580000014,-75.9901300000014,-75.9919570000014,-75.9941580000014,-75.9980450000014,-76.0031580000014,-76.0061580000014,-76.0062220000014,-76.0091580000014,-76.0157970000014,-76.0001580000014,-75.9904380000014,-75.9985340000014,-76.0031580000014,-76.0071460000014,-76.0091580000014,-76.0121580000014,-76.0217870000014,-76.0225150000014,-76.0242680000014,-76.0258510000014,-76.0338850000014,-76.0271580000014,-76.0258230000014,-76.0265910000014,-76.0301580000014,-76.0359530000014,-76.0327080000014,-76.0343520000014,-76.0325380000014,-76.0327500000014,-76.0391580000014,-76.0421580000014,-76.0485690000014,-76.0442790000014,-76.0487180000014,-76.0489500000014,-76.0463980000014,-76.0413730000014,-76.0444700000014,-76.0416970000014,-76.0501730000014,-76.0519960000014,-76.0553990000014,-76.0521180000014,-76.0580640000014,-76.0572580000014,-76.0584790000014,-76.0612040000014,-76.0623210000014,-76.0661580000014,-76.0691580000014,-76.0721580000014,-76.0734150000014,-76.0710500000014,-76.0744550000014,-76.0751580000014,-76.0817680000014,-76.0852740000014,-76.0834000000014,-76.0803260000014,-76.0843330000014,-76.0871580000014,-76.0912620000014,-76.0931580000014,-76.0978540000014,-76.1024160000014,-76.1027800000014,-76.1047410000014,-76.1018570000014,-76.0991580000014,-76.0961580000014,-76.0893890000014,-76.0863110000014,-76.0872990000014,-76.0926380000014,-76.0866130000014,-76.0856310000014,-76.0778120000014,-76.0781580000014,-76.0907830000014,-76.1029090000014,-76.1030020000014,-76.0989130000014,-76.0989940000014,-76.1061770000014,-76.1077640000014,-76.1126160000014,-76.1141580000014,-76.1167230000014,-76.1184840000014,-76.1185810000014,-76.1201580000014,-76.1270130000014,-76.1252610000014,-76.1219730000014,-76.1206850000014,-76.1223060000014,-76.1291580000014,-76.1309620000014,-76.1359980000014,-76.1372770000014,-76.1411580000014,-76.1441580000014,-76.1490470000014,-76.1492220000014,-76.1507370000014,-76.1553840000014,-76.1523430000014,-76.1531580000014,-76.1568770000014,-76.1591580000014,-76.1662000000014,-76.1711580000014,-76.1725420000014,-76.1776170000014,-76.1741580000014,-76.1702920000014,-76.1704630000014,-76.1687230000014,-76.1711580000014,-76.1741580000014,-76.1752490000014,-76.1719410000014,-76.1741580000014,-76.1831580000014,-76.1861580000014,-76.1891580000014,-76.1921580000014,-76.2041580000014,-76.2081410000014,-76.2097850000014,-76.2126890000014,-76.2164600000014,-76.2161580000014,-76.2221580000014,-76.2251580000014,-76.2323820000014,-76.2341580000014,-76.2379830000014,-76.2387540000014,-76.2357560000014,-76.2341580000014,-76.2302180000014,-76.2284950000014,-76.2321960000014,-76.2353030000014,-76.2348420000014,-76.2366180000014,-76.2389210000014,-76.2371580000014,-76.2363610000014,-76.2425370000014,-76.2371580000014,-76.2341580000014,-76.2281580000014,-76.2275420000014,-76.2311580000014,-76.2349140000014,-76.2371580000014,-76.2401580000014,-76.2467700000014,-76.2461580000014,-76.2431580000014,-76.2401580000014,-76.2371580000014,-76.2367320000014,-76.2397700000014,-76.2397830000014,-76.2431580000014,-76.2461580000014,-76.2521580000014,-76.2559610000014,-76.2537070000014,-76.2521580000014,-76.2551580000014,-76.2568570000014,-76.2609660000014,-76.2608050000014,-76.2700970000014,-76.2641580000014,-76.2629320000014,-76.2654060000014,-76.2701580000014,-76.2740070000014,-76.2761580000014,-76.2791580000014,-76.2851580000014,-76.2868930000014,-76.2881580000014,-76.2911580000014,-76.2957390000014,-76.2987780000014,-76.3001580000014,-76.3019090000014,-76.3046000000014,-76.3061580000014,-76.3098230000014,-76.3074810000014,-76.3069970000014,-76.3152990000014,-76.3129700000014,-76.3159380000014,-76.3192330000014,-76.3211580000014,-76.3240250000014,-76.3224720000014,-76.3232360000014,-76.3271580000014,-76.3301580000014,-76.3368710000014,-76.3335450000015,-76.3301580000014,-76.3202560000014,-76.3196320000014,-76.3216340000015,-76.3214860000014,-76.3242370000014,-76.3210430000014,-76.3181580000014,-76.3151580000014,-76.3110530000014,-76.3151580000014,-76.3211060000014,-76.3231240000014,-76.3271580000014,-76.3301580000014,-76.3355320000014,-76.3395210000015,-76.3361580000014,-76.3331580000014,-76.3312370000014,-76.3361580000014,-76.3368380000014,-76.3391580000014,-76.3421580000014,-76.3451580000014,-76.3511580000014,-76.3541580000014,-76.3609550000014,-76.3612520000014,-76.3568990000014,-76.3571310000014,-76.3583500000015,-76.3673960000014,-76.3669780000014,-76.3621770000014,-76.3674350000014,-76.3691580000014,-76.3721580000014,-76.3781580000014,-76.3819090000014,-76.3820680000014,-76.3801710000014,-76.3764310000014,-76.3781580000014,-76.3824700000014,-76.3833560000015,-76.3876300000014,-76.3931580000014,-76.3961580000014,-76.4021580000014,-76.4080050000014,-76.4111580000014,-76.4164110000014,-76.4261580000014,-76.4294190000014,-76.4351580000015,-76.4441580000015,-76.4531580000015,-76.4547150000014,-76.4544710000014,-76.4561580000014,-76.4621580000015,-76.4648160000014,-76.4688360000014,-76.4661550000015,-76.4659080000014,-76.4741580000015,-76.4771580000015,-76.4801580000015,-76.4831580000015,-76.4951580000015,-76.4970080000014,-76.4981580000015,-76.5064720000014,-76.5071580000014,-76.5109240000015,-76.5097710000015,-76.4988020000014,-76.4985000000014,-76.4921580000015,-76.4891580000015,-76.4861580000014,-76.4801580000015,-76.4778740000014,-76.4741580000014,-76.4711580000015,-76.4657430000014,-76.4615970000014,-76.4580880000014,-76.4577080000014,-76.4644100000014,-76.4621580000014,-76.4591580000014,-76.4574220000014,-76.4507530000014,-76.4501850000014,-76.4531580000015,-76.4541340000014,-76.4484280000014,-76.4411580000014,-76.4408750000015,-76.4375760000014,-76.4372910000014,-76.4351150000014,-76.4359780000014,-76.4381580000015,-76.4411580000014,-76.4455010000014,-76.4398100000014,-76.4381580000014,-76.4372370000014,-76.4351580000014,-76.4321580000014,-76.4263990000014,-76.4244200000014,-76.4266610000014,-76.4233030000015,-76.4248210000014,-76.4321390000015,-76.4307950000014,-76.4321580000014,-76.4339520000014,-76.4381580000014,-76.4418790000014,-76.4321800000014,-76.4381580000014,-76.4395000000014,-76.4370420000015,-76.4357100000014,-76.4441580000015,-76.4491550000014,-76.4561580000014,-76.4578760000014,-76.4591580000014,-76.4621580000014,-76.4624890000014,-76.4603360000014,-76.4601190000015,-76.4621580000014,-76.4656740000014,-76.4649990000014,-76.4591580000014,-76.4561580000014,-76.4523940000014,-76.4494880000015,-76.4501580000014,-76.4531580000015,-76.4561580000014,-76.4597290000014,-76.4643280000014,-76.4878210000014,-76.4812750000014,-76.4763110000014,-76.4743700000014,-76.4771580000015,-76.4801580000014,-76.4861580000015,-76.4891580000015,-76.4943090000015,-76.4903180000015,-76.4897650000015,-76.4848900000014,-76.4827800000015,-76.4921580000015,-76.5041580000014,-76.5068930000014,-76.5073740000014,-76.5132000000014,-76.5082700000014,-76.5071580000015,-76.4891580000014,-76.4831580000014,-76.4801580000014,-76.4757200000014,-76.4711580000014,-76.4656170000014,-76.4630470000014,-76.4561580000014,-76.4546220000014,-76.4531580000015,-76.4512750000014,-76.4411580000014,-76.4368560000014,-76.4401590000014,-76.4410720000015,-76.4395860000014,-76.4351580000015,-76.4299350000014,-76.4261580000014,-76.4171580000014,-76.4141580000014,-76.4121720000014,-76.4071570000014,-76.4036790000014,-76.4027580000015,-76.3978080000014,-76.3966510000014,-76.3931580000014,-76.3901580000014,-76.3895710000014,-76.3961580000014,-76.3991580000014,-76.4021580000014,-76.4034650000014,-76.4029590000014,-76.4055580000014,-76.4059160000014,-76.4079140000014,-76.4051580000014,-76.4048030000014,-76.3954360000014,-76.3939830000014,-76.3847390000014,-76.3811580000014,-76.3801300000014,-76.3829400000014,-76.3830070000014,-76.3852540000014,-76.3841580000014,-76.3811580000014,-76.3790790000014,-76.3751580000014,-76.3721580000014,-76.3691580000014,-76.3661580000014,-76.3651020000014,-76.3661570000014,-76.3645410000014,-76.3541580000014,-76.3532660000014,-76.3571580000014,-76.3601580000014,-76.3631580000014,-76.3649940000014,-76.3693290000014,-76.3645010000014,-76.3665340000014,-76.3663970000014,-76.3686720000015,-76.3659990000014,-76.3631580000014,-76.3591270000014,-76.3579720000014,-76.3541580000014,-76.3525350000014,-76.3497430000014,-76.3467020000014,-76.3481580000014,-76.3519170000014,-76.3541580000014,-76.3571580000014,-76.3573860000014,-76.3511580000014,-76.3451580000014,-76.3421580000014,-76.3378800000014,-76.3392860000014,-76.3361580000014,-76.3359460000014,-76.3333270000014,-76.3349830000014,-76.3397250000014,-76.3411760000014,-76.3488190000014,-76.3532700000014,-76.3451580000014,-76.3421580000014,-76.3380500000014,-76.3384160000014,-76.3469810000014,-76.3439380000014,-76.3444710000014,-76.3482710000014,-76.3511580000014,-76.3541580000014,-76.3556200000014,-76.3646500000014,-76.3530230000014,-76.3511890000014,-76.3481580000014,-76.3370850000014,-76.3400730000014,-76.3405560000014,-76.3391580000014,-76.3331580000014,-76.3301580000014,-76.3271580000014,-76.3233050000014,-76.3241580000014,-76.3280290000014,-76.3295270000014,-76.3265810000014,-76.3241580000014,-76.3192730000014,-76.3139560000014,-76.3151580000014,-76.3188220000014,-76.3183170000014,-76.3260900000014,-76.3214260000014,-76.3160440000014,-76.3108870000014,-76.3097570000014,-76.3114710000014,-76.3127340000014,-76.3151580000014,-76.3192790000014,-76.3162410000014,-76.3181580000014,-76.3222540000014,-76.3241580000014,-76.3301580000014,-76.3343750000014,-76.3366910000014,-76.3361580000014,-76.3350780000014,-76.3271580000014,-76.3031580000014,-76.2987490000014,-76.3018240000014,-76.3063010000014,-76.3061580000014,-76.3057160000014,-76.3001580000014,-76.2985340000014,-76.2963180000014,-76.2954920000014,-76.2941580000014,-76.2815140000015,-76.2810820000014,-76.2831310000014,-76.2821580000014,-76.2738120000014,-76.2611580000014,-76.2586990000014,-76.2538230000014,-76.2502090000014,-76.2451770000014,-76.2392770000015,-76.2381460000014,-76.2393750000014,-76.2443890000014,-76.2431580000014,-76.2380380000014,-76.2251580000014,-76.2239670000014,-76.2158180000014,-76.2131580000014,-76.2090710000014,-76.2071580000014,-76.2017870000014,-76.1951580000014,-76.1946460000014,-76.1981580000015,-76.2065610000014,-76.2011580000014,-76.1921580000014,-76.1891580000014,-76.1882060000014,-76.1944410000014,-76.1989130000014,-76.2011580000014,-76.2081940000014,-76.2084040000014,-76.2062510000014,-76.2053540000014,-76.2041580000014,-76.2028090000014,-76.2042380000014,-76.2011580000014,-76.1951580000014,-76.1891580000014,-76.1868360000014,-76.1831580000014,-76.1817970000014,-76.1843330000014,-76.1801580000014,-76.1761230000014,-76.1748000000014,-76.1706080000014,-76.1702850000014,-76.1725140000014,-76.1711580000014,-76.1681580000014,-76.1656870000014,-76.1591580000014,-76.1557520000014,-76.1548720000014,-76.1524150000014,-76.1551310000014,-76.1550710000014,-76.1561580000014,-76.1601490000014,-76.1642940000014,-76.1628380000014,-76.1561580000014,-76.1558940000014,-76.1519220000014,-76.1509920000014,-76.1476250000014,-76.1441580000014,-76.1372950000014,-76.1363240000014,-76.1418480000014,-76.1427050000014,-76.1411580000014,-76.1356320000014,-76.1321580000014,-76.1291580000014,-76.1253600000014,-76.1231580000014,-76.1193310000014,-76.1102570000014,-76.1111580000014,-76.1184880000014,-76.1192750000014,-76.1171580000014,-76.1144900000014,-76.1081580000014,-76.1072020000014,-76.1081580000014,-76.1122500000014,-76.1152370000014,-76.1141580000014,-76.1111580000014,-76.1081580000014,-76.0991580000014,-76.1011290000014,-76.1005910000014,-76.0931580000014,-76.0908910000014,-76.0861820000014,-76.0841580000014,-76.0800080000014,-76.0801670000014,-76.0846330000014,-76.0847000000014,-76.0712800000014,-76.0678780000014,-76.0679690000014,-76.0712120000014,-76.0723690000014,-76.0691580000014,-76.0631580000014,-76.0511580000014,-76.0513030000014,-76.0492940000014,-76.0421580000014,-76.0391580000014,-76.0292270000014,-76.0301580000014,-76.0379820000014,-76.0367640000014,-76.0354450000014,-76.0331580000014,-76.0304240000014,-76.0235530000014,-76.0181580000014,-76.0149280000014,-76.0091580000014,-76.0056950000014,-76.0001580000014,-75.9938340000014,-75.9881580000014,-75.9791580000014,-75.9777370000014,-75.9771440000014,-75.9747740000014,-75.9754310000014,-75.9791580000014,-75.9812670000014,-75.9862690000014,-75.9881580000014,-75.9911580000014,-75.9922570000014,-75.9913260000014,-75.9884060000014,-75.9881580000014,-75.9881580000014,-75.9897400000014,-75.9848230000014,-75.9839760000014,-75.9801570000014,-75.9761580000014,-75.9752800000014,-75.9719440000014,-75.9709920000014,-75.9671580000014,-75.9641580000014,-75.9581580000014,-75.9548430000014,-75.9521580000014,-75.9453930000014,-75.9444650000014,-75.9454860000014,-75.9354820000014,-75.9341580000014,-75.9261470000014,-75.9249820000014],"lat":[40.373339000003,40.373163000003,40.370163000003,40.368562000003,40.365241000003,40.3662150000031,40.362533000003,40.357109000003,40.355163000003,40.3491630000031,40.3498610000031,40.3461630000031,40.3414640000031,40.341823000003,40.3394880000031,40.340827000003,40.338920000003,40.3311630000031,40.3281630000031,40.3251630000031,40.3243660000031,40.315243000003,40.314707000003,40.311633000003,40.3127170000031,40.3123120000031,40.309900000003,40.3095700000031,40.3068270000031,40.310163000003,40.3119990000031,40.313733000003,40.315320000003,40.3196850000031,40.3221630000031,40.3260400000031,40.3265610000031,40.325436000003,40.328163000003,40.329933000003,40.3310060000031,40.328163000003,40.319163000003,40.3172100000031,40.3146000000031,40.3161720000031,40.322958000003,40.318711000003,40.314565000003,40.310163000003,40.3079010000031,40.3078610000031,40.3039760000031,40.3067290000031,40.304473000003,40.3053630000031,40.304163000003,40.3011630000031,40.2981630000031,40.2897680000031,40.2891630000031,40.2879930000031,40.2862900000031,40.2870400000031,40.290197000003,40.291089000003,40.2933760000031,40.2921630000031,40.285994000003,40.282337000003,40.2828950000031,40.290502000003,40.2855140000031,40.2872230000031,40.2869250000031,40.2823940000031,40.281620000003,40.2792810000031,40.2786780000031,40.2757890000031,40.274980000003,40.272548000003,40.268865000003,40.268163000003,40.2672410000031,40.2670170000031,40.269695000003,40.2692910000031,40.267183000003,40.268163000003,40.271163000003,40.2719980000031,40.270213000003,40.2711630000031,40.274163000003,40.2748930000031,40.277406000003,40.2736720000031,40.2754900000031,40.2732930000031,40.2738440000031,40.277163000003,40.277816000003,40.2771630000031,40.2752770000031,40.276969000003,40.2753460000031,40.266151000003,40.2591630000031,40.2553980000031,40.254572000003,40.253163000003,40.2478680000031,40.245941000003,40.2407210000031,40.241163000003,40.254153000003,40.255377000003,40.257302000003,40.259163000003,40.262667000003,40.2561630000031,40.2519200000031,40.247709000003,40.246527000003,40.246725000003,40.2516010000031,40.2531630000031,40.2591630000031,40.2639890000031,40.262163000003,40.2585690000031,40.255133000003,40.254987000003,40.259006000003,40.259163000003,40.2561630000031,40.253163000003,40.2515430000031,40.251114000003,40.244598000003,40.2386930000031,40.239911000003,40.2381630000031,40.2359300000031,40.2321630000031,40.229163000003,40.226163000003,40.2231630000031,40.2221560000031,40.226185000003,40.2231630000031,40.2186720000031,40.2138450000031,40.2132420000031,40.2107320000031,40.2159470000031,40.2218340000031,40.2201630000031,40.2171630000031,40.213446000003,40.2104890000031,40.2111980000031,40.2146110000031,40.216079000003,40.2178850000031,40.2141630000031,40.211824000003,40.2034490000031,40.2011370000031,40.200975000003,40.2058370000031,40.2033490000031,40.2025010000031,40.2001540000031,40.199453000003,40.1931630000031,40.189133000003,40.180855000003,40.1857120000031,40.1867540000031,40.189401000003,40.189646000003,40.1942990000031,40.1992920000031,40.1991630000031,40.1947100000031,40.194227000003,40.1909300000031,40.186611000003,40.1867680000031,40.1884220000031,40.189160000003,40.1920860000031,40.1946360000031,40.195379000003,40.1977910000031,40.1983590000031,40.197370000003,40.194451000003,40.1956100000031,40.199163000003,40.2081630000031,40.2143110000031,40.215089000003,40.2127870000031,40.2120060000031,40.2081630000031,40.1998690000031,40.1972720000031,40.197910000003,40.2005170000031,40.1991630000031,40.1955280000031,40.1940440000031,40.1894580000031,40.1888280000031,40.190814000003,40.1907030000031,40.1860880000031,40.1885640000031,40.1876290000031,40.1889390000031,40.187872000003,40.1834020000031,40.181904000003,40.1686530000031,40.1686360000031,40.171036000003,40.1715930000031,40.1737580000031,40.1751630000031,40.1821210000031,40.184163000003,40.1900460000031,40.1871630000031,40.184163000003,40.1806430000031,40.1851340000031,40.1772560000031,40.1774330000031,40.181820000003,40.1769760000031,40.1763540000031,40.1731490000031,40.173995000003,40.1718380000031,40.1711360000031,40.1688190000031,40.1707110000031,40.167245000003,40.1721630000031,40.1734570000031,40.1730020000031,40.165337000003,40.1631630000031,40.1569330000031,40.1585970000031,40.1596010000031,40.1563020000031,40.1555660000031,40.156900000003,40.1546670000031,40.1532820000031,40.1511630000031,40.1489220000031,40.1451630000031,40.143794000003,40.1463370000031,40.1451630000031,40.1442940000031,40.1408670000031,40.1398920000031,40.1381820000031,40.1361630000031,40.1351000000031,40.1352110000031,40.1400480000031,40.1369290000031,40.1365060000031,40.135104000003,40.126754000003,40.1258870000031,40.1234740000031,40.123242000003,40.1259970000031,40.1262690000031,40.1241630000031,40.1226870000031,40.1220640000031,40.1181630000031,40.1171920000031,40.1191720000031,40.119124000003,40.1181670000031,40.1146190000031,40.1151630000031,40.1190020000031,40.1189800000031,40.1166790000031,40.1159230000031,40.1186470000031,40.119478000003,40.1215880000031,40.1224030000031,40.1305200000031,40.134139000003,40.136480000003,40.137087000003,40.1396020000031,40.1370770000031,40.1361630000031,40.1282540000031,40.1274560000031,40.1265170000031,40.1238340000031,40.1234940000031,40.1208220000031,40.1204710000031,40.1178100000031,40.1174410000031,40.1121630000031,40.111413000003,40.1087730000031,40.107821000003,40.1095200000031,40.1071090000031,40.1091630000031,40.1056960000031,40.1025430000031,40.1027750000031,40.0998850000031,40.0992680000031,40.0968610000031,40.0931490000031,40.0872100000031,40.0869510000031,40.0833240000031,40.0810340000031,40.080268000003,40.0776480000031,40.077355000003,40.0751490000031,40.0757180000031,40.0727120000031,40.0720250000031,40.068205000003,40.0690890000031,40.0676470000031,40.0648810000031,40.0659130000031,40.0649050000031,40.0643110000031,40.0614200000031,40.0611630000031,40.0609580000031,40.0636220000031,40.0637430000031,40.0626960000031,40.0652370000031,40.065132000003,40.063155000003,40.0596420000031,40.0581630000031,40.0576180000031,40.059497000003,40.0604450000031,40.0652440000031,40.0676250000031,40.0680760000031,40.0703700000031,40.071252000003,40.0740970000031,40.0749800000031,40.0795560000031,40.0807860000031,40.0828640000031,40.083059000003,40.0852910000031,40.085313000003,40.0882220000031,40.0881630000031,40.0851630000031,40.0825690000031,40.079163000003,40.078282000003,40.0801440000031,40.0798970000031,40.0731630000031,40.0685740000031,40.0632680000031,40.0656540000031,40.0650860000031,40.0611630000031,40.0581630000031,40.0518410000031,40.0537820000031,40.0531970000031,40.0491630000031,40.0472390000031,40.0473020000031,40.0461630000031,40.0444870000031,40.0393930000031,40.0360120000031,40.0344530000031,40.0333190000031,40.0311630000031,40.0251630000031,40.0235840000031,40.0210120000031,40.0221630000031,40.0242940000031,40.0238720000031,40.0258050000031,40.0277630000031,40.0321170000031,40.0332650000031,40.0371630000031,40.0380330000031,40.0414370000031,40.0420780000031,40.0390710000031,40.0412160000031,40.0426020000031,40.0451160000031,40.0475810000031,40.0431630000031,40.0420280000031,40.0355900000031,40.0341630000031,40.0281630000031,40.0251630000031,40.025078000003,40.0219900000031,40.0231740000031,40.0221630000031,40.0212490000031,40.0189450000031,40.018408000003,40.0148360000031,40.0141730000031,40.0172780000031,40.0172400000031,40.0198410000031,40.0207890000031,40.0236940000031,40.0225850000031,40.0251630000031,40.0221360000031,40.0207940000031,40.0178220000031,40.0178230000031,40.0150090000031,40.0151490000031,40.0123020000031,40.0110450000031,40.0138960000031,40.0136620000031,40.0093810000031,40.0071630000031,40.0041630000031,40.0007470000031,40.0047670000031,40.0036500000031,40.0041630000031,40.0101630000031,40.0119130000031,40.0145050000031,40.0136100000031,40.0101720000031,40.0108230000031,40.0082080000031,40.0071630000031,40.0015620000031,40.0002220000031,39.9970570000031,39.9904430000031,39.991034000003,39.9941460000031,39.9961620000031,39.995163000003,39.9944460000031,39.9922540000031,39.9960770000031,39.9958580000031,39.9891630000031,39.9867920000031,39.9839770000031,39.9838720000031,39.9801630000031,39.9795930000031,39.9822100000031,39.9773160000031,39.9741630000031,39.971163000003,39.9720540000031,39.9681390000031,39.9707090000031,39.9720080000031,39.9759250000031,39.9747800000031,39.9719800000031,39.9701660000031,39.9749190000031,39.9757620000031,39.9779990000031,39.9779560000031,39.9759990000031,39.9745740000031,39.9751910000031,39.9711630000031,39.9681630000031,39.9635690000031,39.9625180000031,39.9691680000031,39.9663100000031,39.9651630000031,39.9591630000031,39.9554540000031,39.9544600000031,39.9508280000031,39.9492870000031,39.9501860000031,39.9487850000031,39.9513850000031,39.9531630000031,39.9493670000031,39.9490270000031,39.9451400000031,39.9381630000031,39.9375890000031,39.9411630000031,39.9424820000031,39.9405140000031,39.941140000003,39.944163000003,39.9454040000031,39.9418900000031,39.935187000003,39.9381630000031,39.9477010000031,39.9475510000031,39.9397380000031,39.9381630000031,39.9344710000031,39.9335890000031,39.9321630000031,39.9280670000031,39.9304850000031,39.9291630000031,39.9231630000031,39.9166070000031,39.9185730000031,39.9130990000031,39.912391000003,39.9104120000031,39.9081630000031,39.9034430000031,39.9021630000031,39.9018350000031,39.9035170000031,39.9042670000031,39.9061370000031,39.9069920000031,39.9092270000031,39.9024540000031,39.9016490000031,39.9051630000031,39.9071030000031,39.9111630000031,39.9119980000031,39.9059700000031,39.902282000003,39.9006990000031,39.9061080000031,39.9061500000031,39.8994180000031,39.9054810000031,39.9147440000031,39.9147570000031,39.9107520000031,39.9071830000031,39.9070090000031,39.9088400000031,39.9051630000031,39.9028470000031,39.8991630000031,39.8942980000031,39.8961630000031,39.8991630000031,39.9007770000031,39.9021630000031,39.908163000003,39.9111630000031,39.9144730000031,39.9145890000031,39.911983000003,39.9114360000031,39.9075370000031,39.9076530000031,39.9051630000031,39.9029530000031,39.9003950000031,39.8995220000031,39.8941940000031,39.8928320000031,39.8920760000031,39.8895980000031,39.8896300000031,39.8936970000031,39.890163000003,39.888191000003,39.8846240000031,39.8776730000031,39.8772220000031,39.8801470000031,39.8745460000031,39.8745840000031,39.878163000003,39.8811630000031,39.8852800000031,39.8876710000031,39.8937340000031,39.8931630000031,39.8895410000031,39.8884030000031,39.8841630000031,39.8804670000031,39.8804200000031,39.8848130000031,39.8849790000031,39.883220000003,39.8847060000031,39.8841630000031,39.8831790000031,39.8804810000031,39.8790090000031,39.874620000003,39.8765170000031,39.871372000003,39.8712770000031,39.8742910000031,39.8714620000031,39.8710460000031,39.8733410000031,39.8745610000031,39.872163000003,39.8711340000031,39.8676270000031,39.8691440000031,39.8673760000031,39.867188000003,39.8661630000031,39.8631630000031,39.8611640000031,39.8604500000031,39.861370000003,39.8571630000031,39.8544320000031,39.8532940000031,39.8475180000031,39.8465460000031,39.8491840000031,39.8451630000031,39.8445150000031,39.8403490000031,39.837961000003,39.8361630000031,39.8348320000031,39.8365650000031,39.8348150000031,39.8345830000031,39.8326560000031,39.8329860000031,39.8273650000031,39.8301210000031,39.8343140000031,39.8343710000031,39.830163000003,39.8233790000031,39.8179000000031,39.8211630000031,39.8229730000031,39.8249650000031,39.8251690000031,39.822973000003,39.8221560000031,39.8258790000031,39.8241630000031,39.8225350000031,39.8211630000031,39.8202300000031,39.8219860000031,39.817738000003,39.8173810000031,39.8156200000031,39.8181630000031,39.8211630000031,39.8244960000031,39.8245330000031,39.8211630000031,39.8194880000031,39.8157210000031,39.8136910000031,39.8121630000031,39.8106210000031,39.8066980000031,39.8098720000031,39.8112750000031,39.8133700000031,39.8115430000031,39.811613000003,39.8099590000031,39.8103630000031,39.8082750000031,39.8091630000031,39.8098710000031,39.813426000003,39.8148300000031,39.8158980000031,39.8157390000031,39.8137120000031,39.8137780000031,39.8111110000031,39.8115490000031,39.8079740000031,39.8067870000031,39.8031630000031,39.8011250000031,39.7971630000031,39.7962590000031,39.7948160000031,39.7971630000031,39.7985760000031,39.7964640000031,39.7963980000031,39.7939410000031,39.7937980000031,39.7910630000031,39.7941630000031,39.7947870000031,39.7979490000031,39.7982180000031,39.8010070000031,39.8021450000031,39.8091630000031,39.8108020000031,39.8123240000031,39.8109040000031,39.8105570000031,39.8086280000031,39.8091630000031,39.8103200000031,39.8191520000031,39.8169280000031,39.817313000003,39.8191330000031,39.8211630000031,39.8235090000031,39.8251750000031,39.8271630000031,39.828226000003,39.8283480000031,39.8235930000031,39.8241630000031,39.8301630000031,39.8331630000031,39.8361630000031,39.8391630000031,39.8410350000031,39.8465790000031,39.8481630000031,39.8497910000031,39.8516470000031,39.8532490000031,39.8551510000031,39.8541630000031,39.8468860000031,39.8491910000031,39.8489620000031,39.8468280000031,39.846050000003,39.8411530000031,39.8402840000031,39.8451630000031,39.8469930000031,39.8481630000031,39.8498860000031,39.8601630000031,39.8617870000031,39.866831000003,39.8631630000031,39.8563320000031,39.8590530000031,39.8577920000031,39.8391630000031,39.839053000003,39.8434700000031,39.8451630000031,39.8463110000031,39.848163000003,39.8577300000031,39.8554800000031,39.8571630000031,39.8597130000031,39.8631630000031,39.8655430000031,39.8695710000031,39.8698980000031,39.8672400000031,39.8687520000031,39.8721630000031,39.8746030000031,39.8781630000031,39.8769230000031,39.8773780000031,39.8811630000031,39.8841630000031,39.8851480000031,39.8880010000031,39.884163000003,39.881163000003,39.879069000003,39.875163000003,39.873484000003,39.8741170000031,39.8760000000031,39.876534000003,39.8664320000031,39.8704190000031,39.8679060000031,39.866163000003,39.8654600000031,39.8633020000031,39.8667730000031,39.8620470000031,39.8579210000031,39.8571630000031,39.856988000003,39.8591310000031,39.858267000003,39.8534250000031,39.8614670000031,39.862905000003,39.865541000003,39.8661630000031,39.8664640000031,39.8642350000031,39.865851000003,39.8653940000031,39.869163000003,39.8750220000031,39.8781630000031,39.883618000003,39.888636000003,39.8898170000031,39.8937810000031,39.8937880000031,39.884914000003,39.8803190000031,39.8781630000031,39.8689990000031,39.8741440000031,39.878557000003,39.8827050000031,39.887772000003,39.8807280000031,39.8811630000031,39.8841630000031,39.884985000003,39.8790180000031,39.876060000003,39.875163000003,39.8721630000031,39.871311000003,39.873641000003,39.876359000003,39.8773230000031,39.882044000003,39.8828900000031,39.8862240000031,39.887163000003,39.8901630000031,39.8907420000031,39.884163000003,39.8759780000031,39.8714920000031,39.874444000003,39.8794230000031,39.8792050000031,39.8751510000031,39.876779000003,39.8781630000031,39.8807510000031,39.8802970000031,39.8841630000031,39.8871630000031,39.8883860000031,39.8886940000031,39.8871630000031,39.884163000003,39.8814570000031,39.8826400000031,39.8792170000031,39.8853220000031,39.8831460000031,39.8837570000031,39.881163000003,39.884536000003,39.8846320000031,39.889861000003,39.894756000003,39.8951280000031,39.8921800000031,39.8913870000031,39.888857000003,39.8893380000031,39.890163000003,39.8917610000031,39.8945490000031,39.8952230000031,39.9021630000031,39.9041250000031,39.9081630000031,39.9104790000031,39.9117030000031,39.9201630000031,39.9208070000031,39.9239600000031,39.9291630000031,39.9334160000031,39.931053000003,39.9312900000031,39.9357790000031,39.9389080000031,39.938919000003,39.937535000003,39.939612000003,39.940551000003,39.9432540000031,39.9421660000031,39.9437700000031,39.943135000003,39.9445890000031,39.944551000003,39.9475380000031,39.947928000003,39.9443320000031,39.9511730000031,39.944163000003,39.941163000003,39.9288110000031,39.9306820000031,39.9364640000031,39.9381630000031,39.941516000003,39.944163000003,39.9454370000031,39.9471630000031,39.948915000003,39.9577870000031,39.9570120000031,39.9536600000031,39.955194000003,39.947481000003,39.948428000003,39.9520440000031,39.9513610000031,39.9575820000031,39.957783000003,39.954296000003,39.9634120000031,39.9636050000031,39.961409000003,39.9621630000031,39.9634860000031,39.968163000003,39.971022000003,39.977163000003,39.9779430000031,39.9752380000031,39.9681820000031,39.971163000003,39.977163000003,39.981085000003,39.9823350000031,39.9795050000031,39.9801630000031,39.980550000003,39.985062000003,39.9852610000031,39.989163000003,39.9916870000031,39.9978350000031,39.998242000003,39.998278000003,39.995707000003,39.9957530000031,40.0022680000031,40.0053590000031,40.007163000003,40.011197000003,40.0098570000031,40.0123920000031,40.009537000003,40.009800000003,40.018014000003,40.017731000003,40.019163000003,40.021156000003,40.0274830000031,40.0298160000031,40.0306790000031,40.0267070000031,40.025438000003,40.026710000003,40.025960000003,40.024069000003,40.0221630000031,40.0191360000031,40.020971000003,40.022163000003,40.0289830000031,40.031163000003,40.0328860000031,40.0356330000031,40.033251000003,40.035947000003,40.034914000003,40.030253000003,40.0291500000031,40.022163000003,40.0208500000031,40.023851000003,40.025965000003,40.027691000003,40.035242000003,40.033133000003,40.0348940000031,40.034010000003,40.034776000003,40.0334160000031,40.0352590000031,40.033902000003,40.0359770000031,40.0366370000031,40.0354000000031,40.034163000003,40.031163000003,40.028479000003,40.0325170000031,40.030821000003,40.0311630000031,40.032160000003,40.034163000003,40.035127000003,40.038176000003,40.038230000003,40.0421270000031,40.0424930000031,40.0420130000031,40.0396420000031,40.039477000003,40.037024000003,40.037163000003,40.040163000003,40.0408070000031,40.043505000003,40.043824000003,40.0467950000031,40.0441690000031,40.045013000003,40.0424470000031,40.042184000003,40.038007000003,40.040748000003,40.039602000003,40.0431630000031,40.049163000003,40.0551630000031,40.056624000003,40.056290000003,40.0538990000031,40.052163000003,40.049163000003,40.0486730000031,40.0451870000031,40.0431630000031,40.043105000003,40.045880000003,40.048581000003,40.0521630000031,40.055163000003,40.061163000003,40.063087000003,40.062498000003,40.0641630000031,40.065815000003,40.0703270000031,40.067163000003,40.065556000003,40.068320000003,40.0701630000031,40.073163000003,40.0766660000031,40.082308000003,40.086499000003,40.091163000003,40.0941630000031,40.096581000003,40.098369000003,40.097889000003,40.093442000003,40.091163000003,40.0896590000031,40.088163000003,40.085163000003,40.079715000003,40.078375000003,40.083166000003,40.083550000003,40.0821630000031,40.074916000003,40.0743750000031,40.076163000003,40.0773410000031,40.079163000003,40.0815590000031,40.082163000003,40.085163000003,40.086626000003,40.0894450000031,40.090399000003,40.093493000003,40.0960620000031,40.0984770000031,40.096099000003,40.096592000003,40.106993000003,40.109163000003,40.113280000003,40.1143160000031,40.1181630000031,40.119700000003,40.1174030000031,40.119244000003,40.117679000003,40.118163000003,40.119323000003,40.121770000003,40.122895000003,40.127163000003,40.1291640000031,40.129972000003,40.129898000003,40.126947000003,40.127163000003,40.128275000003,40.130829000003,40.131797000003,40.131106000003,40.1320540000031,40.131601000003,40.129214000003,40.1327040000031,40.1292740000031,40.128892000003,40.130163000003,40.139815000003,40.132046000003,40.1317830000031,40.1301630000031,40.1291640000031,40.127163000003,40.1257350000031,40.125425000003,40.120386000003,40.1202130000031,40.129451000003,40.137794000003,40.132149000003,40.131164000003,40.128642000003,40.123563000003,40.1225130000031,40.117670000003,40.117374000003,40.114427000003,40.121750000003,40.1283580000031,40.1278300000031,40.129902000003,40.128856000003,40.133163000003,40.135763000003,40.138405000003,40.1391630000031,40.140198000003,40.1365180000031,40.136163000003,40.132338000003,40.1235820000031,40.122756000003,40.1241630000031,40.127163000003,40.1343140000031,40.136163000003,40.140066000003,40.141469000003,40.132242000003,40.128745000003,40.1286410000031,40.126071000003,40.126168000003,40.127163000003,40.1301630000031,40.131546000003,40.131728000003,40.1361630000031,40.137843000003,40.140938000003,40.140507000003,40.143327000003,40.145163000003,40.148163000003,40.1507870000031,40.1539240000031,40.154163000003,40.154322000003,40.152332000003,40.148163000003,40.1443490000031,40.143687000003,40.146540000003,40.148163000003,40.154163000003,40.155770000003,40.1564030000031,40.159294000003,40.1587370000031,40.160391000003,40.160962000003,40.1591230000031,40.161150000003,40.160163000003,40.157163000003,40.156471000003,40.160163000003,40.1631630000031,40.167338000003,40.168596000003,40.1731450000031,40.1751630000031,40.178163000003,40.1791710000031,40.176183000003,40.180055000003,40.184905000003,40.187163000003,40.191943000003,40.199850000003,40.1990500000031,40.203531000003,40.200329000003,40.2007010000031,40.2051630000031,40.207028000003,40.211163000003,40.212861000003,40.2081630000031,40.206078000003,40.2021630000031,40.200924000003,40.2006800000031,40.203900000003,40.204931000003,40.2030160000031,40.200395000003,40.200034000003,40.196163000003,40.1955860000031,40.198763000003,40.198048000003,40.1991630000031,40.200912000003,40.202163000003,40.205163000003,40.208163000003,40.211163000003,40.212049000003,40.215892000003,40.217163000003,40.2231630000031,40.223739000003,40.222238000003,40.223163000003,40.226163000003,40.2304450000031,40.2302590000031,40.228543000003,40.2327790000031,40.2339460000031,40.2376300000031,40.241149000003,40.2392430000031,40.236334000003,40.2367080000031,40.241163000003,40.2454970000031,40.247020000003,40.250422000003,40.247605000003,40.248873000003,40.245787000003,40.245003000003,40.238163000003,40.236947000003,40.237519000003,40.242239000003,40.2441630000031,40.248157000003,40.240509000003,40.240412000003,40.247704000003,40.248828000003,40.254214000003,40.255182000003,40.260044000003,40.259163000003,40.256163000003,40.2501630000031,40.248310000003,40.247163000003,40.246841000003,40.248972000003,40.249823000003,40.251766000003,40.252076000003,40.2552590000031,40.252534000003,40.252307000003,40.2536750000031,40.257247000003,40.259163000003,40.2607560000031,40.2613670000031,40.2585030000031,40.2621630000031,40.268880000003,40.2704080000031,40.2729130000031,40.274163000003,40.277163000003,40.2792560000031,40.284359000003,40.2856030000031,40.284814000003,40.289163000003,40.289636000003,40.287339000003,40.287693000003,40.2854850000031,40.285095000003,40.292163000003,40.295163000003,40.296269000003,40.293198000003,40.288521000003,40.288613000003,40.290036000003,40.292163000003,40.293519000003,40.293706000003,40.288634000003,40.2889410000031,40.285757000003,40.287877000003,40.289163000003,40.2931900000031,40.3041630000031,40.305505000003,40.306172000003,40.313163000003,40.313843000003,40.313663000003,40.310163000003,40.308399000003,40.2981630000031,40.2946960000031,40.297067000003,40.2981630000031,40.2951630000031,40.292853000003,40.287616000003,40.285638000003,40.285689000003,40.2826440000031,40.287718000003,40.288365000003,40.2903110000031,40.286990000003,40.2882620000031,40.290112000003,40.290833000003,40.292163000003,40.297304000003,40.294830000003,40.294263000003,40.2951630000031,40.296428000003,40.297070000003,40.300084000003,40.3079310000031,40.306477000003,40.3075090000031,40.307283000003,40.306134000003,40.3027300000031,40.299907000003,40.3018960000031,40.303187000003,40.3057280000031,40.306013000003,40.308154000003,40.309688000003,40.3131630000031,40.3122850000031,40.3148830000031,40.317352000003,40.3191630000031,40.322374000003,40.322743000003,40.318392000003,40.3233900000031,40.319018000003,40.318027000003,40.318109000003,40.320870000003,40.3221630000031,40.323832000003,40.325163000003,40.328163000003,40.325877000003,40.325754000003,40.328429000003,40.330558000003,40.3360780000031,40.334163000003,40.336886000003,40.336700000003,40.3414830000031,40.339839000003,40.344003000003,40.344671000003,40.3461630000031,40.3521630000031,40.353779000003,40.355890000003,40.355420000003,40.359054000003,40.3600520000031,40.361777000003,40.361754000003,40.363064000003,40.370331000003,40.3704110000031,40.374191000003,40.369657000003,40.3671630000031,40.364498000003,40.362346000003,40.362162000003,40.363616000003,40.361163000003,40.3593770000031,40.357328000003,40.3574190000031,40.355427000003,40.3541450000031,40.354848000003,40.359827000003,40.360398000003,40.3658560000031,40.3671630000031,40.368487000003,40.372686000003,40.371152000003,40.373339000003]}]]],"X1","drive_40min",{"interactive":false,"className":"","pane":"tmap401","stroke":true,"color":"#666666","weight":2,"opacity":1,"fill":true,"fillOpacity":0,"dashArray":"none","smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[40.2320640000031,40.0214810000031,40.343367000003,39.960425000003,40.173767000003,40.0512780000031,40.036830000003,40.0354030000031,40.0425510000031,39.987355000003,40.0669260000031,40.0675900000031,40.0691220000031,40.029486000003,40.152633000003,40.0365820000031,39.9795700000031,39.8925700000031,39.9852040000031,40.335298000003,40.1028740000031,40.304024000003,40.1342390000031,40.039047000003,39.983719000003,39.8938620000031,40.037415000003,40.1566570000031,40.068084000003,40.3150360000031,40.0394030000031,40.102891000003,39.988550000003,40.0183180000031,40.0585040000031,39.9752500000031,40.0651920000031,40.035544000003,40.354217000003,40.341683000003,40.3358090000031,39.9915480000031,40.043017000003,40.155201000003,39.984952000003,40.028539000003,40.1422270000031,40.0378750000031,40.1920390000031,40.0825060000031,40.186896000003,40.175481000003],[-76.1361990000014,-75.6638640000014,-75.9784560000014,-76.1872860000014,-76.3079400000015,-76.3062690000014,-76.4534500000014,-76.2543970000014,-76.3094440000014,-76.2735450000014,-76.3343510000014,-76.3071810000014,-76.2904860000014,-76.3367750000014,-76.3151440000014,-76.3615040000014,-75.9310820000014,-76.1696210000014,-75.8690310000014,-75.9292850000014,-76.0882800000014,-75.9698560000014,-76.3095170000014,-76.3058020000014,-75.8194430000014,-76.1695090000014,-75.7706030000014,-76.3042560000014,-76.3161900000014,-75.9931170000014,-76.4285360000014,-76.0882360000014,-76.1777580000014,-75.6783480000014,-76.3411980000014,-76.2742710000014,-76.4108830000014,-76.2961840000014,-75.9481620000014,-75.9760530000014,-75.9481730000014,-76.0176770000014,-76.2889240000014,-75.8906470000014,-76.2801010000015,-76.3247980000014,-76.3043750000014,-76.2716470000014,-76.1761130000014,-76.3413260000014,-76.1841870000014,-76.1776910000014],[5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238,5.65685424949238],["Anderson.Pharmacy","Chester.County.Pediatrics.Exton","Childrens.Clinic.of.Wyomissing","Clinic.for.Special.Children","Compliance.Navigation.Specialists.DBA.CNS.Occ","Custom.Prescriptions.of.Lancaster","Hillcrest.Pharmacy..Compounding.of.Lancaster","Lancaster.EMS","Lancaster.Health.Center.Arch","Lancaster.Pediatric.Associates.Willow.Street","LC.Com.VC.Ctr","LGH.Express.at.Crooked.Oak","LGH.Crooked.Oak.Family.Medicine","LGH.Lancaster.General.Hospital","LGH.Lititz.Family.Medicine","LGHP.Manor.Ridge.Family.Medicine","LGH.Parkesburg.Family.Medicine","LGH.WALTER.L..AUMENT.FAMILY.HC","RITE.AID.STORE..11142","RITE.AID.STORE..11170","Stauffers.LTC.Pharmacy.New.Holland.2","The.Medicine.Shoppe.2057","UPMC.Pinnacle.Lititz","RITE.AID.STORE..00729","RITE.AID.STORE..00992","RITE.AID.STORE..01922","RITE.AID.STORE..03768","McElroy.Pharmacy","Weis.Pharmacy.17","Weis.Pharmacy.175","VDI.Sloans.Mountville.Pharmacy","VDI.Stauffers.Drug.Store","VDI.Wiley.Pharmacy.Of.Strasburg","Wegmans.Pharmacy..050","Wegmans.Pharmacy..135","Weis.Pharmacy.133","Weis.Pharmacy.138","NCS.Pharmacy","OAKSIDE.CARE.PHARMACY","Reading.Pediatrics","RITE.AID.STORE..00467","Weis.Pharmacy.191","RITE.AID.STORE..04684","RITE.AID.STORE..07861","RITE.AID.STORE..11034","Weis.Pharmacy.41","Weis.Pharmacy.49","Weis.Pharmacy.55","Weis.Pharmacy.79","Weis.Pharmacy.88","WELLSPAN.EPHRATA.COMMUNITY.HOSPITAL","Wellspan.Family.Medicine.Lake.Street"],"vaccine_points_in_drive",{"interactive":true,"className":"","pane":"tmap402","stroke":true,"color":"#666666","weight":1,"opacity":0.5,"fill":true,"fillColor":["#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000"],"fillOpacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},null,null,["<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Anderson Pharmacy<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Anderson Pharmacy<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>334 Main Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-336-2292<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.Andersononmain.com<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chester County Pediatrics-Exton<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Chester County Pediatrics-Exton<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>690 West Lincoln Highway<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>610-873-5437<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Childrens Clinic of Wyomissing<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Childrens Clinic of Wyomissing<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>2240  Ridgewood Road<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>610-378-1722<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.childrensclinicofwyo.com/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Clinic for Special Children<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Clinic for Special Children<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>535 Bunker Hill Rd<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-687-9407<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Compliance Navigation Specialists DBA CNS Occ<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Compliance Navigation Specialists DBA CNS Occ<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>38 Copperfield Cir<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>800-551-9816<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.cnsoccmed.com/services/covid-19-services/covid-19-vaccine/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Custom Prescriptions of Lancaster<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Custom Prescriptions of Lancaster<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>902 N Duke Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-393-0518<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://customscripts.us/covid-19-vaccine/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Hillcrest Pharmacy  Compounding of Lancaster<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Hillcrest Pharmacy  Compounding of Lancaster<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>3985 Columbia Ave<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-283-1184<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.HillcrestLancaster.com<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lancaster EMS<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Lancaster EMS<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1829 Lincoln Highway East<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-872-4688<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.lemsa.com/vaccineSignup.asp<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lancaster Health Center-Arch<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Lancaster Health Center-Arch<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>304 North Water Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>1-844-905-1250<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://lancasterhealthcenter.org/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lancaster Pediatric Associates-Willow Street<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Lancaster Pediatric Associates-Willow Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>222 Willow Valley Lakes Dr<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-291-5931<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://lancped.com/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LC Com VC Ctr<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LC Com VC Ctr<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>Park City Mall<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-588-1020<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://vaccinatelancaster.org/162/Lancaster-Co-Community-Vaccination-Cente<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LGH Express at Crooked Oak<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LGH Express at Crooked Oak<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1605 Lititz Pike<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-735-3995<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>http://www.lghealthexpress.org/?y_source=1_ODQ1Mjk0MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LGH-Crooked Oak Family Medicine<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LGH-Crooked Oak Family Medicine<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1655 Crooked Oak Drive<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-569-2678<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.lancastergeneralhealth.org/patient-and-visitor-information/find-a-location/crooked-oak?y_source=1_ODM2OTc3Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LGH-Lancaster General Hospital<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LGH-Lancaster General Hospital<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>555 North Duke Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-544-5700<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>http://lghealth.org/vaccine<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LGH-Lititz Family Medicine<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LGH-Lititz Family Medicine<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>562 West 2nd Avenue<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-544-5700<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LGHP Manor Ridge Family Medicine<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LGHP Manor Ridge Family Medicine<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>2113 Manor Ridge Drive<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-544-5700<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LGH-Parkesburg Family Medicine<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LGH-Parkesburg Family Medicine<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>950 South Octorara Trail<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>610-857-6648<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>LGH-WALTER L. AUMENT FAMILY HC<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>LGH-WALTER L. AUMENT FAMILY HC<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>317  Chestnut Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-544-5700<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #11142<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #11142<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>128 AIRPORT ROAD<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #11170<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #11170<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>418 PENN STREET<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Stauffers LTC Pharmacy-New Holland 2<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Stauffers LTC Pharmacy-New Holland 2<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>147 E Main St<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-355-9300<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.stauffersdrugstore.com/long-term-care<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>The Medicine Shoppe 2057<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>The Medicine Shoppe 2057<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>101 West Lancaster Avenue<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>610-777-2313<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.shillingtonms.com/pharmacy-request-covid-19-vaccine<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>UPMC Pinnacle Lititz<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>UPMC Pinnacle Lititz<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>CHRISTOPHER DIMAULO<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>1-844-876-2822<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://vaccine.upmc.com/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #00729<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #00729<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>59 NORTH QUEEN STREET<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #00992<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #00992<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>320 EAST LINCOLN HIGHWAY<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #01922<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #01922<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>315 WEST FOURTH STREET<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #03768<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #03768<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1249 HORSESHOE PIKE<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>McElroy Pharmacy<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>McElroy Pharmacy<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>100 E Main St<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-626-2222<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>http://www.mcelroypharmacy.com/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-17<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-17<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1700-A Fruitville Pike<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-175<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-175<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1112 W.Wyomissing Blvd<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>VDI-Sloans Mountville Pharmacy<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>VDI-Sloans Mountville Pharmacy<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>2 College Ave<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-285-7443<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.sloanspharmacies.com/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>VDI-Stauffers Drug Store<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>VDI-Stauffers Drug Store<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>149 E MAIN ST<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-355-9300<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.stauffersdrugstore.com/covid-19-vaccine-info<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>VDI-Wiley Pharmacy Of Strasburg<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>VDI-Wiley Pharmacy Of Strasburg<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>300 HISTORIC DR<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-687-6058<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Wegmans Pharmacy #050<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Wegmans Pharmacy #050<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1056 E. Lancaster Ave<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.wegmans.com/pharmacy/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Wegmans Pharmacy #135<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Wegmans Pharmacy #135<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>2000 Crossings Blvd<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.wegmans.com/pharmacy/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-133<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-133<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>2600 Willow St. Pike North<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-138<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-138<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1400 Stoney Battery Road<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>NCS Pharmacy<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>NCS Pharmacy<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>545 Pershing Avenue<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-509-6259<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>http://www.ncspharmacy.com/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>OAKSIDE CARE PHARMACY<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>OAKSIDE CARE PHARMACY<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>440 LEHIGH STREET<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>484-663-5760<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.oaksidecarepharmacy.com/covid-19-vaccination<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Reading Pediatrics<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Reading Pediatrics<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>40 Berkshire Court<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>610-374-7400<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://readingpediatrics.com/<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #00467<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #00467<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>525 PENN AVENUE<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>610-373-5241<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-191<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-191<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>5360 Lincoln Hwy<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #04684<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #04684<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>825A EAST CHESTNUT STREET<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #07861<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #07861<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>3145 MAIN STREET<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>RITE AID STORE #11034<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>RITE AID STORE #11034<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>2600 WILLOW STREET PIKE<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.riteaid.com/pharmacy/covid-qualifier<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-41<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-41<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1204 Millersville Pike<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-49<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-49<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>740 S. Broad Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-55<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-55<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1603 Lincoln Highway East<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-79<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-79<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>331 N. Reading Road<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Weis Pharmacy-88<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Weis Pharmacy-88<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>1643 Manheim Pike<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>NA<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>WELLSPAN EPHRATA COMMUNITY HOSPITAL<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>WELLSPAN EPHRATA COMMUNITY HOSPITAL<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>PHARMACY DEPARTMENT<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>855-851-3641<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.wellspan.org/covid19<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Wellspan Family Medicine-Lake Street<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Facility_Name<\/nobr><\/td><td align=\"right\"><nobr>Wellspan Family Medicine-Lake Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Address<\/nobr><\/td><td align=\"right\"><nobr>136 Lake Street<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Phone_Number<\/nobr><\/td><td align=\"right\"><nobr>717-721-7718<\/nobr><\/td><\/tr><tr><td style=\"color: #888888;\"><nobr>Website<\/nobr><\/td><td align=\"right\"><nobr>https://www.wellspan.org/offices-locations/wellspan-family-medicine-lake-street/<\/nobr><\/td><\/tr><\/table><\/div>"],null,["Anderson Pharmacy","Chester County Pediatrics-Exton","Childrens Clinic of Wyomissing","Clinic for Special Children","Compliance Navigation Specialists DBA CNS Occ","Custom Prescriptions of Lancaster","Hillcrest Pharmacy  Compounding of Lancaster","Lancaster EMS","Lancaster Health Center-Arch","Lancaster Pediatric Associates-Willow Street","LC Com VC Ctr","LGH Express at Crooked Oak","LGH-Crooked Oak Family Medicine","LGH-Lancaster General Hospital","LGH-Lititz Family Medicine","LGHP Manor Ridge Family Medicine","LGH-Parkesburg Family Medicine","LGH-WALTER L. AUMENT FAMILY HC","RITE AID STORE #11142","RITE AID STORE #11170","Stauffers LTC Pharmacy-New Holland 2","The Medicine Shoppe 2057","UPMC Pinnacle Lititz","RITE AID STORE #00729","RITE AID STORE #00992","RITE AID STORE #01922","RITE AID STORE #03768","McElroy Pharmacy","Weis Pharmacy-17","Weis Pharmacy-175","VDI-Sloans Mountville Pharmacy","VDI-Stauffers Drug Store","VDI-Wiley Pharmacy Of Strasburg","Wegmans Pharmacy #050","Wegmans Pharmacy #135","Weis Pharmacy-133","Weis Pharmacy-138","NCS Pharmacy","OAKSIDE CARE PHARMACY","Reading Pediatrics","RITE AID STORE #00467","Weis Pharmacy-191","RITE AID STORE #04684","RITE AID STORE #07861","RITE AID STORE #11034","Weis Pharmacy-41","Weis Pharmacy-49","Weis Pharmacy-55","Weis Pharmacy-79","Weis Pharmacy-88","WELLSPAN EPHRATA COMMUNITY HOSPITAL","Wellspan Family Medicine-Lake Street"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["drive_40min","vaccine_points_in_drive"],{"collapsed":true,"autoZIndex":true,"position":"topleft"}]}],"limits":{"lat":[39.7910630000031,40.374191000003],"lng":[-76.5132000000014,-75.6095930000014]},"fitBounds":[39.7910630000031,-76.5132000000014,40.374191000003,-75.6095930000014,[]]},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="table-of-all-vaccine-sites" class="section level3">
+<h3>Table of All Vaccine Sites</h3>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Facility_Name
+</th>
+<th style="text-align:left;">
+Address
+</th>
+<th style="text-align:left;">
+Phone_Number
+</th>
+<th style="text-align:left;">
+Website
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Anderson Pharmacy
+</td>
+<td style="text-align:left;">
+334 Main Street
+</td>
+<td style="text-align:left;">
+717-336-2292
+</td>
+<td style="text-align:left;">
+<a href="https://www.Andersononmain.com" style="     ">https://www.Andersononmain.com</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Chester County Pediatrics-Exton
+</td>
+<td style="text-align:left;">
+690 West Lincoln Highway
+</td>
+<td style="text-align:left;">
+610-873-5437
+</td>
+<td style="text-align:left;">
+<a href="NA" style="     ">NA</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Childrens Clinic of Wyomissing
+</td>
+<td style="text-align:left;">
+2240 Ridgewood Road
+</td>
+<td style="text-align:left;">
+610-378-1722
+</td>
+<td style="text-align:left;">
+<a href="https://www.childrensclinicofwyo.com/" style="     ">https://www.childrensclinicofwyo.com/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Clinic for Special Children
+</td>
+<td style="text-align:left;">
+535 Bunker Hill Rd
+</td>
+<td style="text-align:left;">
+717-687-9407
+</td>
+<td style="text-align:left;">
+<a href="NA" style="     ">NA</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Compliance Navigation Specialists DBA CNS Occ
+</td>
+<td style="text-align:left;">
+38 Copperfield Cir
+</td>
+<td style="text-align:left;">
+800-551-9816
+</td>
+<td style="text-align:left;">
+<a href="https://www.cnsoccmed.com/services/covid-19-services/covid-19-vaccine/" style="     ">https://www.cnsoccmed.com/services/covid-19-services/covid-19-vaccine/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Custom Prescriptions of Lancaster
+</td>
+<td style="text-align:left;">
+902 N Duke Street
+</td>
+<td style="text-align:left;">
+717-393-0518
+</td>
+<td style="text-align:left;">
+<a href="https://customscripts.us/covid-19-vaccine/" style="     ">https://customscripts.us/covid-19-vaccine/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hillcrest Pharmacy Compounding of Lancaster
+</td>
+<td style="text-align:left;">
+3985 Columbia Ave
+</td>
+<td style="text-align:left;">
+717-283-1184
+</td>
+<td style="text-align:left;">
+<a href="https://www.HillcrestLancaster.com" style="     ">https://www.HillcrestLancaster.com</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lancaster EMS
+</td>
+<td style="text-align:left;">
+1829 Lincoln Highway East
+</td>
+<td style="text-align:left;">
+717-872-4688
+</td>
+<td style="text-align:left;">
+<a href="https://www.lemsa.com/vaccineSignup.asp" style="     ">https://www.lemsa.com/vaccineSignup.asp</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lancaster Health Center-Arch
+</td>
+<td style="text-align:left;">
+304 North Water Street
+</td>
+<td style="text-align:left;">
+1-844-905-1250
+</td>
+<td style="text-align:left;">
+<a href="https://lancasterhealthcenter.org/" style="     ">https://lancasterhealthcenter.org/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lancaster Pediatric Associates-Willow Street
+</td>
+<td style="text-align:left;">
+222 Willow Valley Lakes Dr
+</td>
+<td style="text-align:left;">
+717-291-5931
+</td>
+<td style="text-align:left;">
+<a href="https://lancped.com/" style="     ">https://lancped.com/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LC Com VC Ctr
+</td>
+<td style="text-align:left;">
+Park City Mall
+</td>
+<td style="text-align:left;">
+717-588-1020
+</td>
+<td style="text-align:left;">
+<a href="https://vaccinatelancaster.org/162/Lancaster-Co-Community-Vaccination-Cente" style="     ">https://vaccinatelancaster.org/162/Lancaster-Co-Community-Vaccination-Cente</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGH Express at Crooked Oak
+</td>
+<td style="text-align:left;">
+1605 Lititz Pike
+</td>
+<td style="text-align:left;">
+717-735-3995
+</td>
+<td style="text-align:left;">
+<a href="http://www.lghealthexpress.org/?y_source=1_ODQ1Mjk0MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D" style="     ">http://www.lghealthexpress.org/?y_source=1_ODQ1Mjk0MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGH-Crooked Oak Family Medicine
+</td>
+<td style="text-align:left;">
+1655 Crooked Oak Drive
+</td>
+<td style="text-align:left;">
+717-569-2678
+</td>
+<td style="text-align:left;">
+<a href="https://www.lancastergeneralhealth.org/patient-and-visitor-information/find-a-location/crooked-oak?y_source=1_ODM2OTc3Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D" style="     ">https://www.lancastergeneralhealth.org/patient-and-visitor-information/find-a-location/crooked-oak?y_source=1_ODM2OTc3Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGH-Lancaster General Hospital
+</td>
+<td style="text-align:left;">
+555 North Duke Street
+</td>
+<td style="text-align:left;">
+717-544-5700
+</td>
+<td style="text-align:left;">
+<a href="http://lghealth.org/vaccine" style="     ">http://lghealth.org/vaccine</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGH-Lititz Family Medicine
+</td>
+<td style="text-align:left;">
+562 West 2nd Avenue
+</td>
+<td style="text-align:left;">
+717-544-5700
+</td>
+<td style="text-align:left;">
+<a href="https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines" style="     ">https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGHP Manor Ridge Family Medicine
+</td>
+<td style="text-align:left;">
+2113 Manor Ridge Drive
+</td>
+<td style="text-align:left;">
+717-544-5700
+</td>
+<td style="text-align:left;">
+<a href="https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines" style="     ">https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGH-Parkesburg Family Medicine
+</td>
+<td style="text-align:left;">
+950 South Octorara Trail
+</td>
+<td style="text-align:left;">
+610-857-6648
+</td>
+<td style="text-align:left;">
+<a href="https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines" style="     ">https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGH-WALTER L. AUMENT FAMILY HC
+</td>
+<td style="text-align:left;">
+317 Chestnut Street
+</td>
+<td style="text-align:left;">
+717-544-5700
+</td>
+<td style="text-align:left;">
+<a href="https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines" style="     ">https://www.lancastergeneralhealth.org/covid-19-information/covid-19-vaccines</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #11142
+</td>
+<td style="text-align:left;">
+128 AIRPORT ROAD
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #11170
+</td>
+<td style="text-align:left;">
+418 PENN STREET
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Stauffers LTC Pharmacy-New Holland 2
+</td>
+<td style="text-align:left;">
+147 E Main St
+</td>
+<td style="text-align:left;">
+717-355-9300
+</td>
+<td style="text-align:left;">
+<a href="https://www.stauffersdrugstore.com/long-term-care" style="     ">https://www.stauffersdrugstore.com/long-term-care</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The Medicine Shoppe 2057
+</td>
+<td style="text-align:left;">
+101 West Lancaster Avenue
+</td>
+<td style="text-align:left;">
+610-777-2313
+</td>
+<td style="text-align:left;">
+<a href="https://www.shillingtonms.com/pharmacy-request-covid-19-vaccine" style="     ">https://www.shillingtonms.com/pharmacy-request-covid-19-vaccine</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UPMC Pinnacle Lititz
+</td>
+<td style="text-align:left;">
+CHRISTOPHER DIMAULO
+</td>
+<td style="text-align:left;">
+1-844-876-2822
+</td>
+<td style="text-align:left;">
+<a href="https://vaccine.upmc.com/" style="     ">https://vaccine.upmc.com/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #00729
+</td>
+<td style="text-align:left;">
+59 NORTH QUEEN STREET
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #00992
+</td>
+<td style="text-align:left;">
+320 EAST LINCOLN HIGHWAY
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #01922
+</td>
+<td style="text-align:left;">
+315 WEST FOURTH STREET
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #03768
+</td>
+<td style="text-align:left;">
+1249 HORSESHOE PIKE
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+McElroy Pharmacy
+</td>
+<td style="text-align:left;">
+100 E Main St
+</td>
+<td style="text-align:left;">
+717-626-2222
+</td>
+<td style="text-align:left;">
+<a href="http://www.mcelroypharmacy.com/" style="     ">http://www.mcelroypharmacy.com/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-17
+</td>
+<td style="text-align:left;">
+1700-A Fruitville Pike
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-175
+</td>
+<td style="text-align:left;">
+1112 W.Wyomissing Blvd
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VDI-Sloans Mountville Pharmacy
+</td>
+<td style="text-align:left;">
+2 College Ave
+</td>
+<td style="text-align:left;">
+717-285-7443
+</td>
+<td style="text-align:left;">
+<a href="https://www.sloanspharmacies.com/" style="     ">https://www.sloanspharmacies.com/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VDI-Stauffers Drug Store
+</td>
+<td style="text-align:left;">
+149 E MAIN ST
+</td>
+<td style="text-align:left;">
+717-355-9300
+</td>
+<td style="text-align:left;">
+<a href="https://www.stauffersdrugstore.com/covid-19-vaccine-info" style="     ">https://www.stauffersdrugstore.com/covid-19-vaccine-info</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VDI-Wiley Pharmacy Of Strasburg
+</td>
+<td style="text-align:left;">
+300 HISTORIC DR
+</td>
+<td style="text-align:left;">
+717-687-6058
+</td>
+<td style="text-align:left;">
+<a href="NA" style="     ">NA</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wegmans Pharmacy #050
+</td>
+<td style="text-align:left;">
+1056 E. Lancaster Ave
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.wegmans.com/pharmacy/" style="     ">https://www.wegmans.com/pharmacy/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wegmans Pharmacy #135
+</td>
+<td style="text-align:left;">
+2000 Crossings Blvd
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.wegmans.com/pharmacy/" style="     ">https://www.wegmans.com/pharmacy/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-133
+</td>
+<td style="text-align:left;">
+2600 Willow St. Pike North
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-138
+</td>
+<td style="text-align:left;">
+1400 Stoney Battery Road
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NCS Pharmacy
+</td>
+<td style="text-align:left;">
+545 Pershing Avenue
+</td>
+<td style="text-align:left;">
+717-509-6259
+</td>
+<td style="text-align:left;">
+<a href="http://www.ncspharmacy.com/" style="     ">http://www.ncspharmacy.com/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OAKSIDE CARE PHARMACY
+</td>
+<td style="text-align:left;">
+440 LEHIGH STREET
+</td>
+<td style="text-align:left;">
+484-663-5760
+</td>
+<td style="text-align:left;">
+<a href="https://www.oaksidecarepharmacy.com/covid-19-vaccination" style="     ">https://www.oaksidecarepharmacy.com/covid-19-vaccination</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Reading Pediatrics
+</td>
+<td style="text-align:left;">
+40 Berkshire Court
+</td>
+<td style="text-align:left;">
+610-374-7400
+</td>
+<td style="text-align:left;">
+<a href="https://readingpediatrics.com/" style="     ">https://readingpediatrics.com/</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #00467
+</td>
+<td style="text-align:left;">
+525 PENN AVENUE
+</td>
+<td style="text-align:left;">
+610-373-5241
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-191
+</td>
+<td style="text-align:left;">
+5360 Lincoln Hwy
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #04684
+</td>
+<td style="text-align:left;">
+825A EAST CHESTNUT STREET
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #07861
+</td>
+<td style="text-align:left;">
+3145 MAIN STREET
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RITE AID STORE #11034
+</td>
+<td style="text-align:left;">
+2600 WILLOW STREET PIKE
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://www.riteaid.com/pharmacy/covid-qualifier" style="     ">https://www.riteaid.com/pharmacy/covid-qualifier</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-41
+</td>
+<td style="text-align:left;">
+1204 Millersville Pike
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-49
+</td>
+<td style="text-align:left;">
+740 S. Broad Street
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-55
+</td>
+<td style="text-align:left;">
+1603 Lincoln Highway East
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-79
+</td>
+<td style="text-align:left;">
+331 N. Reading Road
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Weis Pharmacy-88
+</td>
+<td style="text-align:left;">
+1643 Manheim Pike
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+<a href="https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4" style="     ">https://c.ateb.com/3f647956b456425d9c12360db8e4fdb4</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WELLSPAN EPHRATA COMMUNITY HOSPITAL
+</td>
+<td style="text-align:left;">
+PHARMACY DEPARTMENT
+</td>
+<td style="text-align:left;">
+855-851-3641
+</td>
+<td style="text-align:left;">
+<a href="https://www.wellspan.org/covid19" style="     ">https://www.wellspan.org/covid19</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wellspan Family Medicine-Lake Street
+</td>
+<td style="text-align:left;">
+136 Lake Street
+</td>
+<td style="text-align:left;">
+717-721-7718
+</td>
+<td style="text-align:left;">
+<a href="https://www.wellspan.org/offices-locations/wellspan-family-medicine-lake-street/" style="     ">https://www.wellspan.org/offices-locations/wellspan-family-medicine-lake-street/</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
